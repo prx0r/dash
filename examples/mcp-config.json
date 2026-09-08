@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "agentcom": {
+      "command": "node",
+      "args": ["/absolute/path/to/agentcom/mcp-stdio.mjs"],
+      "env": {
+        "BASE_URL": "https://agentcom.org"
+      }
+    }
+  }
+}

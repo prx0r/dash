@@ -1,0 +1,294 @@
+[
+  {
+    "slug": "ucp",
+    "kind": "protocol",
+    "title": "Universal Commerce Protocol (UCP)",
+    "status": "active",
+    "maintainers": [
+      "Google",
+      "Shopify and ecosystem partners"
+    ],
+    "summary": "Open commerce protocol for interoperable journeys between consumer surfaces, businesses, agents, and payment providers. Supports API, MCP, and A2A bindings.",
+    "tags": [
+      "commerce",
+      "checkout",
+      "catalog",
+      "orders",
+      "mcp",
+      "a2a"
+    ],
+    "capabilities": [
+      "catalog discovery",
+      "cart",
+      "checkout",
+      "orders",
+      "capability negotiation"
+    ],
+    "machine_notes": [
+      "Businesses publish a profile at /.well-known/ucp.",
+      "Shopify exposes UCP-shaped MCP tools for catalog, cart, checkout, and orders."
+    ],
+    "sources": [
+      {
+        "url": "https://ucp.dev/",
+        "title": "UCP specification",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://github.com/Universal-Commerce-Protocol/ucp",
+        "title": "UCP GitHub",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://developers.googleblog.com/en/under-the-hood-universal-commerce-protocol-ucp/",
+        "title": "Google: Under the Hood — UCP",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "mcp",
+    "kind": "protocol",
+    "title": "Model Context Protocol (MCP)",
+    "status": "active",
+    "maintainers": [
+      "Model Context Protocol project"
+    ],
+    "summary": "Standard protocol for exposing tools, resources, and prompts to AI applications. AgentCom uses MCP as its primary agent-facing query interface.",
+    "tags": [
+      "tools",
+      "resources",
+      "prompts",
+      "agents"
+    ],
+    "capabilities": [
+      "tools",
+      "resources",
+      "prompts",
+      "streamable HTTP",
+      "stdio"
+    ],
+    "machine_notes": [
+      "Current TypeScript SDK v2 implements the 2026-07-28 MCP specification."
+    ],
+    "sources": [
+      {
+        "url": "https://modelcontextprotocol.io/",
+        "title": "MCP documentation",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://github.com/modelcontextprotocol/typescript-sdk",
+        "title": "Official MCP TypeScript SDK",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "acp",
+    "kind": "protocol",
+    "title": "Agentic Commerce Protocol (ACP)",
+    "status": "beta",
+    "maintainers": [
+      "OpenAI",
+      "Stripe"
+    ],
+    "summary": "Open standard connecting buyers, AI agents, and businesses for product discovery and commerce interactions.",
+    "tags": [
+      "commerce",
+      "openai",
+      "stripe",
+      "product-feeds",
+      "checkout"
+    ],
+    "capabilities": [
+      "product discovery",
+      "merchant feeds",
+      "commerce interactions"
+    ],
+    "machine_notes": [
+      "OpenAI expanded ACP to product discovery in 2026."
+    ],
+    "sources": [
+      {
+        "url": "https://agenticcommerce.dev/",
+        "title": "ACP documentation",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol",
+        "title": "ACP GitHub",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://openai.com/index/powering-product-discovery-in-chatgpt/",
+        "title": "OpenAI: Powering Product Discovery in ChatGPT",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "ap2",
+    "kind": "protocol",
+    "title": "Agent Payments Protocol (AP2)",
+    "status": "active",
+    "maintainers": [
+      "Google / FIDO ecosystem"
+    ],
+    "summary": "Open protocol for secure, interoperable payments involving AI agents, designed to work alongside commerce and agent interoperability protocols.",
+    "tags": [
+      "payments",
+      "authorization",
+      "a2a",
+      "ucp"
+    ],
+    "capabilities": [
+      "payment authorization",
+      "agent payment flows",
+      "mandates"
+    ],
+    "machine_notes": [
+      "AP2 can be used as an extension alongside A2A and UCP."
+    ],
+    "sources": [
+      {
+        "url": "https://ap2-protocol.org/",
+        "title": "AP2 documentation",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://github.com/google-agentic-commerce/AP2",
+        "title": "AP2 GitHub",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "a2a",
+    "kind": "protocol",
+    "title": "Agent2Agent Protocol (A2A)",
+    "status": "active",
+    "maintainers": [
+      "Linux Foundation A2A Project"
+    ],
+    "summary": "Open protocol for communication and interoperability between independent agentic applications.",
+    "tags": [
+      "agents",
+      "interoperability",
+      "json-rpc",
+      "discovery"
+    ],
+    "capabilities": [
+      "agent discovery",
+      "tasks",
+      "streaming",
+      "push notifications",
+      "structured data"
+    ],
+    "machine_notes": [
+      "A2A complements MCP: A2A connects agents to agents; MCP connects agents to tools and resources."
+    ],
+    "sources": [
+      {
+        "url": "https://a2a-protocol.org/",
+        "title": "A2A documentation",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://github.com/a2aproject/A2A",
+        "title": "A2A GitHub",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "x402",
+    "kind": "protocol",
+    "title": "x402",
+    "status": "active",
+    "maintainers": [
+      "x402 Foundation ecosystem"
+    ],
+    "summary": "HTTP-native payments protocol centered on 402 Payment Required, with SDKs for machine and agent payments.",
+    "tags": [
+      "payments",
+      "http-402",
+      "stablecoins",
+      "machine-commerce"
+    ],
+    "capabilities": [
+      "pay-per-request",
+      "payment middleware",
+      "machine payments"
+    ],
+    "machine_notes": [
+      "Useful for paid APIs, datasets, compute, and agent-to-service transactions."
+    ],
+    "sources": [
+      {
+        "url": "https://github.com/x402-foundation/x402",
+        "title": "x402 GitHub",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "mpp",
+    "kind": "protocol",
+    "title": "Machine Payments Protocol (MPP)",
+    "status": "active",
+    "maintainers": [
+      "Tempo",
+      "Stripe"
+    ],
+    "summary": "Open standard for machine-to-machine payments using an HTTP payment flow, designed for agentic payments and usage-based services.",
+    "tags": [
+      "payments",
+      "http-402",
+      "agents",
+      "usage-based"
+    ],
+    "capabilities": [
+      "inline payment negotiation",
+      "microtransactions",
+      "recurring payments",
+      "machine payments"
+    ],
+    "machine_notes": [
+      "Co-authored by Tempo and Stripe; supports agents paying for services without pre-created billing accounts."
+    ],
+    "sources": [
+      {
+        "url": "https://mpp.dev/",
+        "title": "MPP documentation",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://github.com/tempoxyz/mpp-specs",
+        "title": "MPP specifications",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://stripe.com/blog/machine-payments-protocol",
+        "title": "Stripe: Introducing MPP",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  }
+]

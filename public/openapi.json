@@ -1,0 +1,121 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "AgentCom API",
+    "version": "0.1.0",
+    "description": "Machine-readable guides, protocols, platform playbooks, APIs, and MCP resources for selling to and through AI agents."
+  },
+  "servers": [
+    {
+      "url": "https://agentcom.org"
+    }
+  ],
+  "paths": {
+    "/api/v1/catalog": {
+      "get": {
+        "summary": "Get the entire AgentCom catalog",
+        "responses": {
+          "200": {
+            "description": "Catalog"
+          }
+        }
+      }
+    },
+    "/api/v1/search": {
+      "get": {
+        "summary": "Search canonical AgentCom records",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "kind",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "guide",
+                "protocol",
+                "platform",
+                "resource"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Search results"
+          }
+        }
+      }
+    },
+    "/api/v1/items/{slug}": {
+      "get": {
+        "summary": "Get a canonical item",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Item"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/api/v1/audit": {
+      "post": {
+        "summary": "Run a public agent-readiness audit",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                },
+                "required": [
+                  "url"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Audit result"
+          }
+        }
+      }
+    },
+    "/mcp": {
+      "post": {
+        "summary": "MCP JSON-RPC endpoint",
+        "responses": {
+          "200": {
+            "description": "MCP JSON-RPC response"
+          }
+        }
+      }
+    }
+  }
+}

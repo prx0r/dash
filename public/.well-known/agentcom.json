@@ -1,0 +1,29 @@
+{
+  "name": "AgentCom.org",
+  "description": "Machine-readable guides, protocols, platform playbooks, APIs, and MCP resources for selling to and through AI agents.",
+  "version": "0.1.0",
+  "canonical": "https://agentcom.org",
+  "license": "CC-BY-4.0 content; MIT code",
+  "last_verified": "2026-09-08",
+  "interfaces": {
+    "mcp": "https://agentcom.org/mcp",
+    "api": "https://agentcom.org/api/v1",
+    "openapi": "https://agentcom.org/openapi.json",
+    "llms": "https://agentcom.org/llms.txt",
+    "agents": "https://agentcom.org/agents.md",
+    "ndjson": "https://agentcom.org/api/v1/export.ndjson",
+    "graph": "https://agentcom.org/api/v1/graph"
+  },
+  "content_types": [
+    "protocol",
+    "platform",
+    "guide",
+    "resource"
+  ],
+  "counts": {
+    "protocols": 7,
+    "platforms": 6,
+    "guides": 10,
+    "resources": 25
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "term": "Agentic commerce",
+    "definition": "Commerce in which AI agents participate materially in discovery, decision-making, transaction execution, or post-purchase workflows."
+  },
+  {
+    "term": "Agent economy",
+    "definition": "The broader economic layer in which software agents consume services, pay, earn, coordinate, and transact with businesses or other agents."
+  },
+  {
+    "term": "Agent SEO / ACO",
+    "definition": "Informal shorthand for making a business or product legible, trustworthy, retrievable, and actionable to AI agents. Not a single standardized protocol."
+  },
+  {
+    "term": "Business profile",
+    "definition": "A machine-readable document describing a business protocol version, services, and capabilities; UCP commonly publishes this at /.well-known/ucp."
+  },
+  {
+    "term": "Agent profile",
+    "definition": "A machine-readable declaration of an agent platform's supported protocol capabilities used during capability negotiation."
+  },
+  {
+    "term": "MCP resource",
+    "definition": "Read-only contextual content exposed by an MCP server at a URI."
+  },
+  {
+    "term": "MCP tool",
+    "definition": "A callable operation exposed by an MCP server with a structured input schema."
+  },
+  {
+    "term": "Product feed",
+    "definition": "Structured merchant product data delivered to a platform for discovery, listing, advertising, or commerce experiences."
+  },
+  {
+    "term": "Canonical SKU",
+    "definition": "A stable product or variant identifier used as the source identity across downstream catalogs and feeds."
+  }
+]

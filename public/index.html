@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AgentCom.org — The open operating manual for agentic commerce</title>
+  <meta name="description" content="Machine-readable guides, protocols, platform playbooks, APIs and MCP resources for selling to and through AI agents.">
+  <link rel="canonical" href="https://agentcom.org/">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM index">
+  <link rel="alternate" type="application/json" href="/api/v1/catalog" title="JSON catalog">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span>AGENT</span>COM<span class="dot">.ORG</span></a>
+    <nav><a href="#guides">Guides</a><a href="#protocols">Protocols</a><a href="#platforms">Platforms</a><a href="#machine">For agents</a></nav>
+    <a class="ghost" href="/api/v1/catalog">JSON ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">OPEN INFRASTRUCTURE FOR AGENTIC COMMERCE</p>
+      <h1>The operating manual<br>for the <em>agent economy.</em></h1>
+      <p class="hero-copy">Free, source-grounded playbooks for merchants, developers and agents. Every guide is also JSON, Markdown, API-accessible and queryable through MCP.</p>
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Search Shopify MCP, UCP, ChatGPT product feeds, x402…" autocomplete="off">
+        <span class="key">⌘ K</span>
+      </div>
+      <div class="hero-actions"><a class="primary" href="#guides">Browse playbooks</a><a href="#machine">Connect an agent →</a></div>
+      <div id="stats" class="stats"></div>
+    </section>
+
+    <section id="search-results" class="section hidden"><div class="section-head"><div><p class="eyebrow">SEARCH</p><h2>Results</h2></div><button id="clear-search" class="text-button">Clear</button></div><div id="results-grid" class="grid"></div></section>
+
+    <section class="ticker" aria-label="tracked stack">
+      <span>UCP</span><i>↔</i><span>MCP</span><i>↔</i><span>ACP</span><i>↔</i><span>A2A</span><i>↔</i><span>AP2</span><i>↔</i><span>x402</span><i>↔</i><span>MPP</span>
+    </section>
+
+    <section id="guides" class="section">
+      <div class="section-head"><div><p class="eyebrow">DO THE WORK</p><h2>Implementation playbooks</h2></div><p>Practical steps, primary sources, machine mirrors.</p></div>
+      <div id="guides-grid" class="grid"></div>
+    </section>
+
+    <section id="audit" class="audit-section">
+      <div><p class="eyebrow">AGENT READINESS</p><h2>Can agents actually use your store?</h2><p>Run a public-surface check for structured product facts, policies, machine entry points, and UCP discovery.</p></div>
+      <form id="audit-form"><input id="audit-url" type="url" placeholder="https://yourstore.com" required><button type="submit">Audit store</button></form>
+      <div id="audit-result" class="audit-result hidden"></div>
+    </section>
+
+    <section id="protocols" class="section">
+      <div class="section-head"><div><p class="eyebrow">THE STACK</p><h2>Protocols, without the alphabet soup</h2></div><p>What each standard actually unlocks.</p></div>
+      <div id="protocols-grid" class="grid protocol-grid"></div>
+    </section>
+
+    <section id="platforms" class="section">
+      <div class="section-head"><div><p class="eyebrow">DISTRIBUTION</p><h2>Platform playbooks</h2></div><p>Where merchants need to show up now.</p></div>
+      <div id="platforms-grid" class="grid"></div>
+    </section>
+
+    <section id="machine" class="machine-section">
+      <div class="machine-copy"><p class="eyebrow">BUILT FOR AGENTS FIRST</p><h2>This website is an API.</h2><p>HTML is only one rendering of the canonical records. Agents can search the corpus, read structured resources, consume bulk exports, or connect through MCP.</p></div>
+      <div class="terminal">
+        <div class="terminal-bar"><span></span><span></span><span></span><b>agentcom</b></div>
+        <pre><code><span class="muted"># Search the canonical corpus</span>
+curl 'https://agentcom.org/api/v1/search?q=shopify+ucp'
+
+<span class="muted"># Read one guide as Markdown</span>
+curl -H 'Accept: text/markdown' \
+  https://agentcom.org/r/shopify-agent-readiness
+
+<span class="muted"># MCP</span>
+POST https://agentcom.org/mcp
+
+<span class="muted"># Bulk knowledge export</span>
+GET  https://agentcom.org/api/v1/export.ndjson</code></pre>
+      </div>
+      <div class="endpoint-grid">
+        <a href="/llms.txt"><strong>/llms.txt</strong><span>Concise LLM index</span></a>
+        <a href="/agents.md"><strong>/agents.md</strong><span>Agent-facing site description</span></a>
+        <a href="/api/v1/catalog"><strong>/api/v1/catalog</strong><span>Canonical JSON corpus</span></a>
+        <a href="/api/v1/graph"><strong>/api/v1/graph</strong><span>Protocol/platform graph</span></a>
+        <a href="/openapi.json"><strong>/openapi.json</strong><span>API contract</span></a>
+        <a href="/.well-known/agentcom.json"><strong>/.well-known/agentcom.json</strong><span>Discovery descriptor</span></a>
+      </div>
+    </section>
+
+    <section class="principles section"><p class="eyebrow">EDITORIAL RULES</p><h2>Canonical means boringly reliable.</h2><div class="principle-grid"><article><b>01</b><h3>Primary sources first</h3><p>Protocol specs and platform docs beat recycled SEO articles.</p></article><article><b>02</b><h3>Facts have timestamps</h3><p>Every source records when it was last verified.</p></article><article><b>03</b><h3>One fact, many renders</h3><p>HTML, Markdown, JSON, API, NDJSON and MCP derive from the same records.</p></article><article><b>04</b><h3>Free by default</h3><p>The goal is to become infrastructure people and agents naturally reference.</p></article></div></section>
+  </main>
+
+  <footer><a class="brand" href="/"><span>AGENT</span>COM<span class="dot">.ORG</span></a><p>Open operating manual for agentic commerce.</p><div><a href="/llms.txt">llms.txt</a><a href="/api/v1">API</a><a href="/mcp">MCP</a></div></footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

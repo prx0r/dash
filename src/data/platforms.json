@@ -1,0 +1,252 @@
+[
+  {
+    "slug": "shopify",
+    "kind": "platform",
+    "title": "Shopify",
+    "status": "active",
+    "summary": "The most mature mainstream merchant platform for UCP/MCP exposure in the current agentic-commerce stack.",
+    "tags": [
+      "ecommerce",
+      "ucp",
+      "mcp",
+      "catalog",
+      "agents.md"
+    ],
+    "agent_surfaces": [
+      "/agents.md",
+      "/.well-known/ucp",
+      "Storefront Catalog MCP",
+      "Cart MCP",
+      "Checkout MCP",
+      "Order MCP"
+    ],
+    "quick_actions": [
+      "Verify the managed /agents.md page.",
+      "Inspect /.well-known/ucp.",
+      "Test storefront catalog tools with an agent profile.",
+      "Keep policies, variants, inventory, and shipping data precise."
+    ],
+    "sources": [
+      {
+        "url": "https://shopify.dev/docs/agents",
+        "title": "Shopify agentic commerce docs",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://shopify.dev/docs/storefronts/themes/architecture/templates/agents-md-liquid",
+        "title": "Shopify agents.md reference",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://shopify.dev/docs/agents/catalog/storefront-catalog",
+        "title": "Shopify Storefront Catalog MCP",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "google",
+    "kind": "platform",
+    "title": "Google / Merchant Center",
+    "status": "active",
+    "summary": "Google is onboarding merchants to UCP-powered checkout surfaces in AI Mode and Gemini, with Merchant Center as an onboarding surface.",
+    "tags": [
+      "merchant-center",
+      "ucp",
+      "gemini",
+      "ai-mode"
+    ],
+    "agent_surfaces": [
+      "Merchant Center",
+      "UCP",
+      "Gemini",
+      "AI Mode"
+    ],
+    "quick_actions": [
+      "Maintain Merchant Center product data.",
+      "Review UCP technical implementation requirements.",
+      "Validate merchant identity and checkout readiness in the available onboarding sandbox."
+    ],
+    "sources": [
+      {
+        "url": "https://support.google.com/merchants/answer/16992327?hl=en",
+        "title": "Google Merchant Center: UCP onboarding",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://support.google.com/merchants/answer/16837055?hl=en",
+        "title": "Google Merchant Center: UCP checkout",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "openai",
+    "kind": "platform",
+    "title": "OpenAI / ChatGPT Commerce",
+    "status": "active",
+    "summary": "ChatGPT shopping uses merchant/product metadata and ACP-based discovery integrations, including direct merchant feeds and platform integrations.",
+    "tags": [
+      "chatgpt",
+      "acp",
+      "product-feed",
+      "discovery"
+    ],
+    "agent_surfaces": [
+      "ACP",
+      "merchant product feeds",
+      "ChatGPT shopping"
+    ],
+    "quick_actions": [
+      "Ensure product data is complete and fresh.",
+      "If eligible, apply for direct product feed access.",
+      "For Shopify/Etsy merchants, confirm upstream catalog quality because those catalogs are integrated."
+    ],
+    "sources": [
+      {
+        "url": "https://openai.com/index/powering-product-discovery-in-chatgpt/",
+        "title": "OpenAI: Powering Product Discovery in ChatGPT",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://chatgpt.com/merchants/",
+        "title": "ChatGPT merchants",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://openai.com/policies/merchant-feed-terms-of-service/",
+        "title": "OpenAI Merchant Feed Terms",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "stripe",
+    "kind": "platform",
+    "title": "Stripe",
+    "status": "active",
+    "summary": "Stripe provides agentic-commerce infrastructure for product distribution, checkout/payments, agent wallets, and machine payments.",
+    "tags": [
+      "payments",
+      "mpp",
+      "agentic-commerce-suite",
+      "catalog"
+    ],
+    "agent_surfaces": [
+      "Agentic Commerce Suite",
+      "MPP",
+      "agent wallets",
+      "UCP support"
+    ],
+    "quick_actions": [
+      "Map products/services into structured catalogs.",
+      "Choose agentic distribution channels.",
+      "Evaluate MPP for paid machine-accessible services.",
+      "Preserve transaction metadata and authorization trails."
+    ],
+    "sources": [
+      {
+        "url": "https://stripe.com/use-cases/agentic-commerce",
+        "title": "Stripe Agentic Commerce",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://stripe.com/guides/how-to-prepare-for-agentic-commerce-technical-field-guide",
+        "title": "Stripe technical field guide",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://stripe.com/blog/machine-payments-protocol",
+        "title": "Stripe MPP",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "tiktok",
+    "kind": "platform",
+    "title": "TikTok Shop",
+    "status": "active",
+    "summary": "TikTok Shop exposes APIs for sellers and partners to create, update, retrieve, and synchronize structured product catalog data.",
+    "tags": [
+      "social-commerce",
+      "catalog",
+      "products-api",
+      "webhooks"
+    ],
+    "agent_surfaces": [
+      "Products API",
+      "product webhooks",
+      "seller catalog"
+    ],
+    "quick_actions": [
+      "Keep product identifiers stable.",
+      "Synchronize title, description, price, inventory, and images.",
+      "Consume product review/update webhooks.",
+      "Treat the catalog as a machine-readable commerce source of truth."
+    ],
+    "sources": [
+      {
+        "url": "https://partner.tiktokshop.com/docv2/page/products-api-overview",
+        "title": "TikTok Shop Products API overview",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://developers.tiktok.com/blog/tiktok-shop-developer-updates",
+        "title": "TikTok Shop developer updates",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "meta",
+    "kind": "platform",
+    "title": "Meta Commerce",
+    "status": "active",
+    "summary": "Meta Commerce Manager catalogs are structured product sources for Facebook and Instagram commerce and advertising surfaces.",
+    "tags": [
+      "social-commerce",
+      "catalog",
+      "commerce-manager",
+      "product-feed"
+    ],
+    "agent_surfaces": [
+      "Commerce Manager catalog",
+      "product feeds",
+      "Catalog API"
+    ],
+    "quick_actions": [
+      "Use a canonical catalog with stable IDs.",
+      "Keep product details and inventory current.",
+      "Resolve catalog diagnostics.",
+      "Preserve consistency between website product IDs and Meta catalog IDs."
+    ],
+    "sources": [
+      {
+        "url": "https://www.facebookblueprint.com/student/path/219728",
+        "title": "Meta Blueprint: product catalogs",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      },
+      {
+        "url": "https://help.shopify.com/en/manual/online-sales-channels/social-commerce/facebook-instagram-by-meta/publishing-products",
+        "title": "Shopify: publishing products on Meta",
+        "authority": "secondary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "note": "AgentCom discovery descriptor; not asserted as a universal well-known MCP standard.",
+  "name": "agentcom",
+  "transport": "streamable-http-jsonrpc",
+  "endpoint": "https://agentcom.org/mcp",
+  "protocol_version": "2026-07-28",
+  "documentation": "https://agentcom.org/r/mcp"
+}

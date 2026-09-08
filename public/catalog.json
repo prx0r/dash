@@ -1,0 +1,1756 @@
+{
+  "generated_at": "2026-09-08T11:15:00.948Z",
+  "base_url": "https://agentcom.org",
+  "items": [
+    {
+      "slug": "ucp",
+      "kind": "protocol",
+      "title": "Universal Commerce Protocol (UCP)",
+      "status": "active",
+      "maintainers": [
+        "Google",
+        "Shopify and ecosystem partners"
+      ],
+      "summary": "Open commerce protocol for interoperable journeys between consumer surfaces, businesses, agents, and payment providers. Supports API, MCP, and A2A bindings.",
+      "tags": [
+        "commerce",
+        "checkout",
+        "catalog",
+        "orders",
+        "mcp",
+        "a2a"
+      ],
+      "capabilities": [
+        "catalog discovery",
+        "cart",
+        "checkout",
+        "orders",
+        "capability negotiation"
+      ],
+      "machine_notes": [
+        "Businesses publish a profile at /.well-known/ucp.",
+        "Shopify exposes UCP-shaped MCP tools for catalog, cart, checkout, and orders."
+      ],
+      "sources": [
+        {
+          "url": "https://ucp.dev/",
+          "title": "UCP specification",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://github.com/Universal-Commerce-Protocol/ucp",
+          "title": "UCP GitHub",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://developers.googleblog.com/en/under-the-hood-universal-commerce-protocol-ucp/",
+          "title": "Google: Under the Hood — UCP",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/ucp",
+      "alternates": {
+        "html": "https://agentcom.org/r/ucp",
+        "json": "https://agentcom.org/r/ucp.json",
+        "markdown": "https://agentcom.org/r/ucp.md"
+      }
+    },
+    {
+      "slug": "mcp",
+      "kind": "protocol",
+      "title": "Model Context Protocol (MCP)",
+      "status": "active",
+      "maintainers": [
+        "Model Context Protocol project"
+      ],
+      "summary": "Standard protocol for exposing tools, resources, and prompts to AI applications. AgentCom uses MCP as its primary agent-facing query interface.",
+      "tags": [
+        "tools",
+        "resources",
+        "prompts",
+        "agents"
+      ],
+      "capabilities": [
+        "tools",
+        "resources",
+        "prompts",
+        "streamable HTTP",
+        "stdio"
+      ],
+      "machine_notes": [
+        "Current TypeScript SDK v2 implements the 2026-07-28 MCP specification."
+      ],
+      "sources": [
+        {
+          "url": "https://modelcontextprotocol.io/",
+          "title": "MCP documentation",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://github.com/modelcontextprotocol/typescript-sdk",
+          "title": "Official MCP TypeScript SDK",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/mcp",
+      "alternates": {
+        "html": "https://agentcom.org/r/mcp",
+        "json": "https://agentcom.org/r/mcp.json",
+        "markdown": "https://agentcom.org/r/mcp.md"
+      }
+    },
+    {
+      "slug": "acp",
+      "kind": "protocol",
+      "title": "Agentic Commerce Protocol (ACP)",
+      "status": "beta",
+      "maintainers": [
+        "OpenAI",
+        "Stripe"
+      ],
+      "summary": "Open standard connecting buyers, AI agents, and businesses for product discovery and commerce interactions.",
+      "tags": [
+        "commerce",
+        "openai",
+        "stripe",
+        "product-feeds",
+        "checkout"
+      ],
+      "capabilities": [
+        "product discovery",
+        "merchant feeds",
+        "commerce interactions"
+      ],
+      "machine_notes": [
+        "OpenAI expanded ACP to product discovery in 2026."
+      ],
+      "sources": [
+        {
+          "url": "https://agenticcommerce.dev/",
+          "title": "ACP documentation",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol",
+          "title": "ACP GitHub",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://openai.com/index/powering-product-discovery-in-chatgpt/",
+          "title": "OpenAI: Powering Product Discovery in ChatGPT",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/acp",
+      "alternates": {
+        "html": "https://agentcom.org/r/acp",
+        "json": "https://agentcom.org/r/acp.json",
+        "markdown": "https://agentcom.org/r/acp.md"
+      }
+    },
+    {
+      "slug": "ap2",
+      "kind": "protocol",
+      "title": "Agent Payments Protocol (AP2)",
+      "status": "active",
+      "maintainers": [
+        "Google / FIDO ecosystem"
+      ],
+      "summary": "Open protocol for secure, interoperable payments involving AI agents, designed to work alongside commerce and agent interoperability protocols.",
+      "tags": [
+        "payments",
+        "authorization",
+        "a2a",
+        "ucp"
+      ],
+      "capabilities": [
+        "payment authorization",
+        "agent payment flows",
+        "mandates"
+      ],
+      "machine_notes": [
+        "AP2 can be used as an extension alongside A2A and UCP."
+      ],
+      "sources": [
+        {
+          "url": "https://ap2-protocol.org/",
+          "title": "AP2 documentation",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://github.com/google-agentic-commerce/AP2",
+          "title": "AP2 GitHub",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/ap2",
+      "alternates": {
+        "html": "https://agentcom.org/r/ap2",
+        "json": "https://agentcom.org/r/ap2.json",
+        "markdown": "https://agentcom.org/r/ap2.md"
+      }
+    },
+    {
+      "slug": "a2a",
+      "kind": "protocol",
+      "title": "Agent2Agent Protocol (A2A)",
+      "status": "active",
+      "maintainers": [
+        "Linux Foundation A2A Project"
+      ],
+      "summary": "Open protocol for communication and interoperability between independent agentic applications.",
+      "tags": [
+        "agents",
+        "interoperability",
+        "json-rpc",
+        "discovery"
+      ],
+      "capabilities": [
+        "agent discovery",
+        "tasks",
+        "streaming",
+        "push notifications",
+        "structured data"
+      ],
+      "machine_notes": [
+        "A2A complements MCP: A2A connects agents to agents; MCP connects agents to tools and resources."
+      ],
+      "sources": [
+        {
+          "url": "https://a2a-protocol.org/",
+          "title": "A2A documentation",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://github.com/a2aproject/A2A",
+          "title": "A2A GitHub",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/a2a",
+      "alternates": {
+        "html": "https://agentcom.org/r/a2a",
+        "json": "https://agentcom.org/r/a2a.json",
+        "markdown": "https://agentcom.org/r/a2a.md"
+      }
+    },
+    {
+      "slug": "x402",
+      "kind": "protocol",
+      "title": "x402",
+      "status": "active",
+      "maintainers": [
+        "x402 Foundation ecosystem"
+      ],
+      "summary": "HTTP-native payments protocol centered on 402 Payment Required, with SDKs for machine and agent payments.",
+      "tags": [
+        "payments",
+        "http-402",
+        "stablecoins",
+        "machine-commerce"
+      ],
+      "capabilities": [
+        "pay-per-request",
+        "payment middleware",
+        "machine payments"
+      ],
+      "machine_notes": [
+        "Useful for paid APIs, datasets, compute, and agent-to-service transactions."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/x402-foundation/x402",
+          "title": "x402 GitHub",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/x402",
+      "alternates": {
+        "html": "https://agentcom.org/r/x402",
+        "json": "https://agentcom.org/r/x402.json",
+        "markdown": "https://agentcom.org/r/x402.md"
+      }
+    },
+    {
+      "slug": "mpp",
+      "kind": "protocol",
+      "title": "Machine Payments Protocol (MPP)",
+      "status": "active",
+      "maintainers": [
+        "Tempo",
+        "Stripe"
+      ],
+      "summary": "Open standard for machine-to-machine payments using an HTTP payment flow, designed for agentic payments and usage-based services.",
+      "tags": [
+        "payments",
+        "http-402",
+        "agents",
+        "usage-based"
+      ],
+      "capabilities": [
+        "inline payment negotiation",
+        "microtransactions",
+        "recurring payments",
+        "machine payments"
+      ],
+      "machine_notes": [
+        "Co-authored by Tempo and Stripe; supports agents paying for services without pre-created billing accounts."
+      ],
+      "sources": [
+        {
+          "url": "https://mpp.dev/",
+          "title": "MPP documentation",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://github.com/tempoxyz/mpp-specs",
+          "title": "MPP specifications",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://stripe.com/blog/machine-payments-protocol",
+          "title": "Stripe: Introducing MPP",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/mpp",
+      "alternates": {
+        "html": "https://agentcom.org/r/mpp",
+        "json": "https://agentcom.org/r/mpp.json",
+        "markdown": "https://agentcom.org/r/mpp.md"
+      }
+    },
+    {
+      "slug": "shopify",
+      "kind": "platform",
+      "title": "Shopify",
+      "status": "active",
+      "summary": "The most mature mainstream merchant platform for UCP/MCP exposure in the current agentic-commerce stack.",
+      "tags": [
+        "ecommerce",
+        "ucp",
+        "mcp",
+        "catalog",
+        "agents.md"
+      ],
+      "agent_surfaces": [
+        "/agents.md",
+        "/.well-known/ucp",
+        "Storefront Catalog MCP",
+        "Cart MCP",
+        "Checkout MCP",
+        "Order MCP"
+      ],
+      "quick_actions": [
+        "Verify the managed /agents.md page.",
+        "Inspect /.well-known/ucp.",
+        "Test storefront catalog tools with an agent profile.",
+        "Keep policies, variants, inventory, and shipping data precise."
+      ],
+      "sources": [
+        {
+          "url": "https://shopify.dev/docs/agents",
+          "title": "Shopify agentic commerce docs",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://shopify.dev/docs/storefronts/themes/architecture/templates/agents-md-liquid",
+          "title": "Shopify agents.md reference",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://shopify.dev/docs/agents/catalog/storefront-catalog",
+          "title": "Shopify Storefront Catalog MCP",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/shopify",
+      "alternates": {
+        "html": "https://agentcom.org/r/shopify",
+        "json": "https://agentcom.org/r/shopify.json",
+        "markdown": "https://agentcom.org/r/shopify.md"
+      }
+    },
+    {
+      "slug": "google",
+      "kind": "platform",
+      "title": "Google / Merchant Center",
+      "status": "active",
+      "summary": "Google is onboarding merchants to UCP-powered checkout surfaces in AI Mode and Gemini, with Merchant Center as an onboarding surface.",
+      "tags": [
+        "merchant-center",
+        "ucp",
+        "gemini",
+        "ai-mode"
+      ],
+      "agent_surfaces": [
+        "Merchant Center",
+        "UCP",
+        "Gemini",
+        "AI Mode"
+      ],
+      "quick_actions": [
+        "Maintain Merchant Center product data.",
+        "Review UCP technical implementation requirements.",
+        "Validate merchant identity and checkout readiness in the available onboarding sandbox."
+      ],
+      "sources": [
+        {
+          "url": "https://support.google.com/merchants/answer/16992327?hl=en",
+          "title": "Google Merchant Center: UCP onboarding",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://support.google.com/merchants/answer/16837055?hl=en",
+          "title": "Google Merchant Center: UCP checkout",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/google",
+      "alternates": {
+        "html": "https://agentcom.org/r/google",
+        "json": "https://agentcom.org/r/google.json",
+        "markdown": "https://agentcom.org/r/google.md"
+      }
+    },
+    {
+      "slug": "openai",
+      "kind": "platform",
+      "title": "OpenAI / ChatGPT Commerce",
+      "status": "active",
+      "summary": "ChatGPT shopping uses merchant/product metadata and ACP-based discovery integrations, including direct merchant feeds and platform integrations.",
+      "tags": [
+        "chatgpt",
+        "acp",
+        "product-feed",
+        "discovery"
+      ],
+      "agent_surfaces": [
+        "ACP",
+        "merchant product feeds",
+        "ChatGPT shopping"
+      ],
+      "quick_actions": [
+        "Ensure product data is complete and fresh.",
+        "If eligible, apply for direct product feed access.",
+        "For Shopify/Etsy merchants, confirm upstream catalog quality because those catalogs are integrated."
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/powering-product-discovery-in-chatgpt/",
+          "title": "OpenAI: Powering Product Discovery in ChatGPT",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://chatgpt.com/merchants/",
+          "title": "ChatGPT merchants",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://openai.com/policies/merchant-feed-terms-of-service/",
+          "title": "OpenAI Merchant Feed Terms",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/openai",
+      "alternates": {
+        "html": "https://agentcom.org/r/openai",
+        "json": "https://agentcom.org/r/openai.json",
+        "markdown": "https://agentcom.org/r/openai.md"
+      }
+    },
+    {
+      "slug": "stripe",
+      "kind": "platform",
+      "title": "Stripe",
+      "status": "active",
+      "summary": "Stripe provides agentic-commerce infrastructure for product distribution, checkout/payments, agent wallets, and machine payments.",
+      "tags": [
+        "payments",
+        "mpp",
+        "agentic-commerce-suite",
+        "catalog"
+      ],
+      "agent_surfaces": [
+        "Agentic Commerce Suite",
+        "MPP",
+        "agent wallets",
+        "UCP support"
+      ],
+      "quick_actions": [
+        "Map products/services into structured catalogs.",
+        "Choose agentic distribution channels.",
+        "Evaluate MPP for paid machine-accessible services.",
+        "Preserve transaction metadata and authorization trails."
+      ],
+      "sources": [
+        {
+          "url": "https://stripe.com/use-cases/agentic-commerce",
+          "title": "Stripe Agentic Commerce",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://stripe.com/guides/how-to-prepare-for-agentic-commerce-technical-field-guide",
+          "title": "Stripe technical field guide",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://stripe.com/blog/machine-payments-protocol",
+          "title": "Stripe MPP",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/stripe",
+      "alternates": {
+        "html": "https://agentcom.org/r/stripe",
+        "json": "https://agentcom.org/r/stripe.json",
+        "markdown": "https://agentcom.org/r/stripe.md"
+      }
+    },
+    {
+      "slug": "tiktok",
+      "kind": "platform",
+      "title": "TikTok Shop",
+      "status": "active",
+      "summary": "TikTok Shop exposes APIs for sellers and partners to create, update, retrieve, and synchronize structured product catalog data.",
+      "tags": [
+        "social-commerce",
+        "catalog",
+        "products-api",
+        "webhooks"
+      ],
+      "agent_surfaces": [
+        "Products API",
+        "product webhooks",
+        "seller catalog"
+      ],
+      "quick_actions": [
+        "Keep product identifiers stable.",
+        "Synchronize title, description, price, inventory, and images.",
+        "Consume product review/update webhooks.",
+        "Treat the catalog as a machine-readable commerce source of truth."
+      ],
+      "sources": [
+        {
+          "url": "https://partner.tiktokshop.com/docv2/page/products-api-overview",
+          "title": "TikTok Shop Products API overview",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://developers.tiktok.com/blog/tiktok-shop-developer-updates",
+          "title": "TikTok Shop developer updates",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/tiktok",
+      "alternates": {
+        "html": "https://agentcom.org/r/tiktok",
+        "json": "https://agentcom.org/r/tiktok.json",
+        "markdown": "https://agentcom.org/r/tiktok.md"
+      }
+    },
+    {
+      "slug": "meta",
+      "kind": "platform",
+      "title": "Meta Commerce",
+      "status": "active",
+      "summary": "Meta Commerce Manager catalogs are structured product sources for Facebook and Instagram commerce and advertising surfaces.",
+      "tags": [
+        "social-commerce",
+        "catalog",
+        "commerce-manager",
+        "product-feed"
+      ],
+      "agent_surfaces": [
+        "Commerce Manager catalog",
+        "product feeds",
+        "Catalog API"
+      ],
+      "quick_actions": [
+        "Use a canonical catalog with stable IDs.",
+        "Keep product details and inventory current.",
+        "Resolve catalog diagnostics.",
+        "Preserve consistency between website product IDs and Meta catalog IDs."
+      ],
+      "sources": [
+        {
+          "url": "https://www.facebookblueprint.com/student/path/219728",
+          "title": "Meta Blueprint: product catalogs",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://help.shopify.com/en/manual/online-sales-channels/social-commerce/facebook-instagram-by-meta/publishing-products",
+          "title": "Shopify: publishing products on Meta",
+          "authority": "secondary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/meta",
+      "alternates": {
+        "html": "https://agentcom.org/r/meta",
+        "json": "https://agentcom.org/r/meta.json",
+        "markdown": "https://agentcom.org/r/meta.md"
+      }
+    },
+    {
+      "slug": "shopify-agent-readiness",
+      "kind": "guide",
+      "title": "Make a Shopify store agent-ready",
+      "platform": "shopify",
+      "difficulty": "beginner",
+      "summary": "A practical checklist for Shopify merchants: agents.md, UCP discovery, catalog quality, policies, and transaction surfaces.",
+      "tags": [
+        "shopify",
+        "ucp",
+        "mcp",
+        "agents.md",
+        "agent-seo"
+      ],
+      "steps": [
+        "Open /agents.md on the storefront and verify it accurately describes the store and commerce capabilities.",
+        "Open /.well-known/ucp and record the supported UCP version, capabilities, transport, and MCP endpoint.",
+        "Test catalog discovery against the store MCP endpoint using an agent profile URL.",
+        "Verify variant-level product facts: identifiers, price, currency, availability, media, and descriptions.",
+        "Make shipping, returns, contact, and fulfillment policies directly accessible and unambiguous.",
+        "Track agent referrals and checkout handoffs separately from ordinary browser traffic."
+      ],
+      "sources": [
+        {
+          "url": "https://shopify.dev/docs/agents",
+          "title": "Shopify agentic commerce docs",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://shopify.dev/docs/storefronts/themes/architecture/templates/agents-md-liquid",
+          "title": "Shopify agents.md",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://shopify.dev/docs/agents/get-started/build-a-cart",
+          "title": "Shopify UCP/MCP discovery tutorial",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/shopify-agent-readiness",
+      "alternates": {
+        "html": "https://agentcom.org/r/shopify-agent-readiness",
+        "json": "https://agentcom.org/r/shopify-agent-readiness.json",
+        "markdown": "https://agentcom.org/r/shopify-agent-readiness.md"
+      }
+    },
+    {
+      "slug": "google-ucp-onboarding",
+      "kind": "guide",
+      "title": "Prepare for Google UCP / Gemini commerce",
+      "platform": "google",
+      "difficulty": "intermediate",
+      "summary": "A merchant-oriented checklist for getting product data and checkout infrastructure ready for Google UCP onboarding.",
+      "tags": [
+        "google",
+        "merchant-center",
+        "ucp",
+        "gemini"
+      ],
+      "steps": [
+        "Keep Merchant Center account and product data compliant and current.",
+        "Implement the UCP technical requirements before expecting program onboarding.",
+        "Publish and validate the required UCP business profile and identity linkage.",
+        "Validate native checkout APIs in Google's onboarding/sandbox flow when your account receives access.",
+        "Model agent checkout as an extension of your merchant backend, not a separate storefront."
+      ],
+      "sources": [
+        {
+          "url": "https://support.google.com/merchants/answer/16992327?hl=en",
+          "title": "Google UCP onboarding",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://support.google.com/merchants/answer/16837055?hl=en",
+          "title": "Google UCP-powered checkout",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/google-ucp-onboarding",
+      "alternates": {
+        "html": "https://agentcom.org/r/google-ucp-onboarding",
+        "json": "https://agentcom.org/r/google-ucp-onboarding.json",
+        "markdown": "https://agentcom.org/r/google-ucp-onboarding.md"
+      }
+    },
+    {
+      "slug": "chatgpt-product-discovery",
+      "kind": "guide",
+      "title": "Prepare products for discovery in ChatGPT",
+      "platform": "openai",
+      "difficulty": "beginner",
+      "summary": "How to make merchant/product data complete, current, and suitable for ChatGPT shopping and ACP-based product discovery.",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "acp",
+        "product-feed",
+        "agent-seo"
+      ],
+      "steps": [
+        "Use stable product and variant identifiers across feeds and your storefront.",
+        "Keep price and availability synchronized frequently enough to avoid stale recommendations.",
+        "Provide specific attributes that help an agent satisfy constraints, not only marketing copy.",
+        "For direct-feed eligible merchants, follow OpenAI's current product feed specification and application flow.",
+        "For Shopify or Etsy, improve the upstream catalog because those platforms already provide product data to ChatGPT.",
+        "Measure assisted traffic and downstream conversion rather than only classic search rankings."
+      ],
+      "sources": [
+        {
+          "url": "https://openai.com/index/powering-product-discovery-in-chatgpt/",
+          "title": "OpenAI product discovery announcement",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://chatgpt.com/merchants/",
+          "title": "ChatGPT merchants",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/chatgpt-product-discovery",
+      "alternates": {
+        "html": "https://agentcom.org/r/chatgpt-product-discovery",
+        "json": "https://agentcom.org/r/chatgpt-product-discovery.json",
+        "markdown": "https://agentcom.org/r/chatgpt-product-discovery.md"
+      }
+    },
+    {
+      "slug": "agent-seo-basics",
+      "kind": "guide",
+      "title": "Agent SEO / ACO fundamentals",
+      "platform": null,
+      "difficulty": "beginner",
+      "summary": "A platform-neutral playbook for making a merchant legible, trustworthy, and actionable to AI agents.",
+      "tags": [
+        "agent-seo",
+        "aco",
+        "structured-data",
+        "discoverability"
+      ],
+      "steps": [
+        "Expose stable, server-rendered facts: product identity, variants, price, availability, shipping, and policies.",
+        "Make machine entry points explicit: sitemap, structured data, llms.txt/agents.md where applicable, APIs, MCP, and protocol discovery files.",
+        "Use canonical identifiers consistently across website, feeds, marketplaces, and social catalogs.",
+        "Publish negative constraints as clearly as positive claims: exclusions, incompatibilities, delivery limitations, and return exceptions.",
+        "Keep mutable facts fresh and timestamped.",
+        "Create deterministic task paths for search, compare, cart, checkout, order lookup, returns, and support.",
+        "Test with agents and record failures as data-quality bugs."
+      ],
+      "sources": [
+        {
+          "url": "https://stripe.com/guides/how-to-prepare-for-agentic-commerce-technical-field-guide",
+          "title": "Stripe technical field guide",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://llmstxt.org/",
+          "title": "llms.txt proposal",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/agent-seo-basics",
+      "alternates": {
+        "html": "https://agentcom.org/r/agent-seo-basics",
+        "json": "https://agentcom.org/r/agent-seo-basics.json",
+        "markdown": "https://agentcom.org/r/agent-seo-basics.md"
+      }
+    },
+    {
+      "slug": "mcp-for-commerce-resources",
+      "kind": "guide",
+      "title": "Expose commerce knowledge through MCP",
+      "platform": null,
+      "difficulty": "intermediate",
+      "summary": "Design an MCP server that gives agents authoritative commerce resources and narrowly-scoped tools.",
+      "tags": [
+        "mcp",
+        "tools",
+        "resources",
+        "commerce"
+      ],
+      "steps": [
+        "Expose read-only resources for policies, schemas, product definitions, and integration guidance.",
+        "Use tools only when the agent must compute, query fresh state, or cause an action.",
+        "Return structuredContent or JSON objects in addition to human-readable summaries.",
+        "Keep tool schemas narrow and explicit; never hide required parameters inside prose.",
+        "Separate public knowledge tools from authenticated merchant actions.",
+        "Version machine resources and include provenance."
+      ],
+      "sources": [
+        {
+          "url": "https://modelcontextprotocol.io/",
+          "title": "MCP documentation",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://github.com/modelcontextprotocol/typescript-sdk",
+          "title": "MCP TypeScript SDK",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/mcp-for-commerce-resources",
+      "alternates": {
+        "html": "https://agentcom.org/r/mcp-for-commerce-resources",
+        "json": "https://agentcom.org/r/mcp-for-commerce-resources.json",
+        "markdown": "https://agentcom.org/r/mcp-for-commerce-resources.md"
+      }
+    },
+    {
+      "slug": "stripe-machine-payments",
+      "kind": "guide",
+      "title": "Add machine payments with Stripe / MPP",
+      "platform": "stripe",
+      "difficulty": "intermediate",
+      "summary": "When and how to make an API, dataset, compute service, or agent-accessible endpoint payable by machines.",
+      "tags": [
+        "stripe",
+        "mpp",
+        "machine-payments",
+        "api"
+      ],
+      "steps": [
+        "Identify a unit that is naturally payable per request, session, result, or usage block.",
+        "Publish clear machine-readable pricing and what the payment unlocks.",
+        "Use MPP-compatible payment negotiation instead of requiring a human-created billing account where appropriate.",
+        "Design idempotency and receipts into paid tool calls.",
+        "Expose testnet/sandbox examples before production money movement."
+      ],
+      "sources": [
+        {
+          "url": "https://mpp.dev/",
+          "title": "MPP docs",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://stripe.com/blog/machine-payments-protocol",
+          "title": "Stripe MPP announcement",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://github.com/stripe-samples/machine-payments",
+          "title": "Stripe machine payments samples",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/stripe-machine-payments",
+      "alternates": {
+        "html": "https://agentcom.org/r/stripe-machine-payments",
+        "json": "https://agentcom.org/r/stripe-machine-payments.json",
+        "markdown": "https://agentcom.org/r/stripe-machine-payments.md"
+      }
+    },
+    {
+      "slug": "tiktok-catalog-setup",
+      "kind": "guide",
+      "title": "Build a clean TikTok Shop product data pipeline",
+      "platform": "tiktok",
+      "difficulty": "intermediate",
+      "summary": "Treat TikTok Shop as another structured commerce surface with synchronized product state and webhook-driven updates.",
+      "tags": [
+        "tiktok",
+        "catalog",
+        "products-api",
+        "social-commerce"
+      ],
+      "steps": [
+        "Map your canonical SKU/variant model to TikTok Shop product records.",
+        "Synchronize title, description, media, pricing, inventory, and required sales terms.",
+        "Use create/edit APIs for controlled updates rather than manual drift.",
+        "Consume product webhooks to track review and state changes.",
+        "Record per-market differences in required product creation fields."
+      ],
+      "sources": [
+        {
+          "url": "https://partner.tiktokshop.com/docv2/page/products-api-overview",
+          "title": "TikTok Shop Products API",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/tiktok-catalog-setup",
+      "alternates": {
+        "html": "https://agentcom.org/r/tiktok-catalog-setup",
+        "json": "https://agentcom.org/r/tiktok-catalog-setup.json",
+        "markdown": "https://agentcom.org/r/tiktok-catalog-setup.md"
+      }
+    },
+    {
+      "slug": "meta-catalog-foundation",
+      "kind": "guide",
+      "title": "Create a canonical Meta Commerce catalog",
+      "platform": "meta",
+      "difficulty": "beginner",
+      "summary": "A baseline for keeping Facebook and Instagram commerce product data structured, stable, and synchronized.",
+      "tags": [
+        "meta",
+        "commerce-manager",
+        "catalog",
+        "product-feed"
+      ],
+      "steps": [
+        "Create and own the catalog in the correct Meta business account.",
+        "Use stable product IDs that map back to canonical SKUs/variants.",
+        "Choose a repeatable sync method: partner integration, data feed, or API.",
+        "Keep product details and availability fresh and resolve diagnostics quickly.",
+        "Keep return policy, shipping eligibility, and storefront data consistent with the catalog.",
+        "Treat the Meta catalog as a downstream projection of one canonical product source, not a manually edited database."
+      ],
+      "sources": [
+        {
+          "url": "https://www.facebookblueprint.com/student/path/219728",
+          "title": "Meta Blueprint product catalogs",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/meta-catalog-foundation",
+      "alternates": {
+        "html": "https://agentcom.org/r/meta-catalog-foundation",
+        "json": "https://agentcom.org/r/meta-catalog-foundation.json",
+        "markdown": "https://agentcom.org/r/meta-catalog-foundation.md"
+      }
+    },
+    {
+      "slug": "machine-readable-commerce-content",
+      "kind": "guide",
+      "title": "Publish commerce content for agents, not just browsers",
+      "platform": null,
+      "difficulty": "beginner",
+      "summary": "A content architecture for publishing the same authoritative fact as HTML, Markdown, JSON, feeds, and protocol resources.",
+      "tags": [
+        "machine-readable",
+        "json",
+        "markdown",
+        "llms.txt",
+        "api"
+      ],
+      "steps": [
+        "Store content as structured records with provenance and verification dates.",
+        "Render human HTML from those records instead of duplicating facts in templates.",
+        "Offer JSON and Markdown alternates at predictable URLs.",
+        "Publish llms.txt as an index, not as a replacement for canonical source records.",
+        "Provide a searchable API and NDJSON bulk export.",
+        "Expose the same graph through MCP resources/tools.",
+        "Use source freshness rules so stale instructions can be flagged automatically."
+      ],
+      "sources": [
+        {
+          "url": "https://llmstxt.org/",
+          "title": "llms.txt proposal",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://modelcontextprotocol.io/",
+          "title": "MCP documentation",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/machine-readable-commerce-content",
+      "alternates": {
+        "html": "https://agentcom.org/r/machine-readable-commerce-content",
+        "json": "https://agentcom.org/r/machine-readable-commerce-content.json",
+        "markdown": "https://agentcom.org/r/machine-readable-commerce-content.md"
+      }
+    },
+    {
+      "slug": "protocol-selection-map",
+      "kind": "guide",
+      "title": "Choose the right agentic-commerce protocol",
+      "platform": null,
+      "difficulty": "beginner",
+      "summary": "A practical map: use MCP for tools/resources, A2A for agent collaboration, UCP/ACP for commerce flows, and AP2/x402/MPP for payments depending on the use case.",
+      "tags": [
+        "ucp",
+        "acp",
+        "mcp",
+        "a2a",
+        "ap2",
+        "x402",
+        "mpp"
+      ],
+      "steps": [
+        "Need an agent to use your tools or read authoritative resources? Start with MCP.",
+        "Need independent agents to discover and collaborate with each other? Evaluate A2A.",
+        "Need merchant discovery/cart/checkout/order interoperability? Evaluate UCP and the commerce surfaces your target platforms actually support.",
+        "Need OpenAI-specific merchant/product discovery integration? Track ACP and OpenAI merchant feed requirements.",
+        "Need authorized agent payments? Evaluate AP2 in the relevant commerce flow.",
+        "Need machine-pay-per-request economics? Evaluate x402 or MPP.",
+        "Do not implement every protocol by default; implement the smallest set that maps to an active distribution channel."
+      ],
+      "sources": [
+        {
+          "url": "https://ucp.dev/",
+          "title": "UCP",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://agenticcommerce.dev/",
+          "title": "ACP",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://modelcontextprotocol.io/",
+          "title": "MCP",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://a2a-protocol.org/",
+          "title": "A2A",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://ap2-protocol.org/",
+          "title": "AP2",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://github.com/x402-foundation/x402",
+          "title": "x402",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        },
+        {
+          "url": "https://mpp.dev/",
+          "title": "MPP",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/protocol-selection-map",
+      "alternates": {
+        "html": "https://agentcom.org/r/protocol-selection-map",
+        "json": "https://agentcom.org/r/protocol-selection-map.json",
+        "markdown": "https://agentcom.org/r/protocol-selection-map.md"
+      }
+    },
+    {
+      "slug": "shopify-agentic-commerce-docs",
+      "kind": "resource",
+      "title": "Shopify Agentic Commerce Docs",
+      "category": "official-docs",
+      "summary": "Shopify developer hub for UCP-compliant commerce agents, catalogs, carts, checkout, orders, profiles, and MCP endpoints.",
+      "tags": [
+        "shopify",
+        "ucp",
+        "mcp"
+      ],
+      "url": "https://shopify.dev/docs/agents",
+      "sources": [
+        {
+          "url": "https://shopify.dev/docs/agents",
+          "title": "Shopify agentic commerce docs",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/shopify-agentic-commerce-docs",
+      "alternates": {
+        "html": "https://agentcom.org/r/shopify-agentic-commerce-docs",
+        "json": "https://agentcom.org/r/shopify-agentic-commerce-docs.json",
+        "markdown": "https://agentcom.org/r/shopify-agentic-commerce-docs.md"
+      }
+    },
+    {
+      "slug": "shopify-agents-md",
+      "kind": "resource",
+      "title": "Shopify agents.md",
+      "category": "official-docs",
+      "summary": "Shopify reference for the canonical agent-facing /agents.md storefront description.",
+      "tags": [
+        "shopify",
+        "agents.md",
+        "discovery"
+      ],
+      "url": "https://shopify.dev/docs/storefronts/themes/architecture/templates/agents-md-liquid",
+      "sources": [
+        {
+          "url": "https://shopify.dev/docs/storefronts/themes/architecture/templates/agents-md-liquid",
+          "title": "Shopify agents.md",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/shopify-agents-md",
+      "alternates": {
+        "html": "https://agentcom.org/r/shopify-agents-md",
+        "json": "https://agentcom.org/r/shopify-agents-md.json",
+        "markdown": "https://agentcom.org/r/shopify-agents-md.md"
+      }
+    },
+    {
+      "slug": "shopify-storefront-catalog-mcp",
+      "kind": "resource",
+      "title": "Shopify Storefront Catalog MCP",
+      "category": "official-docs",
+      "summary": "Merchant-scoped UCP/MCP tools for product search, lookup, and product details.",
+      "tags": [
+        "shopify",
+        "catalog",
+        "mcp",
+        "ucp"
+      ],
+      "url": "https://shopify.dev/docs/agents/catalog/storefront-catalog",
+      "sources": [
+        {
+          "url": "https://shopify.dev/docs/agents/catalog/storefront-catalog",
+          "title": "Storefront Catalog MCP",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/shopify-storefront-catalog-mcp",
+      "alternates": {
+        "html": "https://agentcom.org/r/shopify-storefront-catalog-mcp",
+        "json": "https://agentcom.org/r/shopify-storefront-catalog-mcp.json",
+        "markdown": "https://agentcom.org/r/shopify-storefront-catalog-mcp.md"
+      }
+    },
+    {
+      "slug": "ucp-spec",
+      "kind": "resource",
+      "title": "UCP Specification",
+      "category": "protocol",
+      "summary": "Canonical Universal Commerce Protocol documentation.",
+      "tags": [
+        "ucp",
+        "commerce"
+      ],
+      "url": "https://ucp.dev/",
+      "sources": [
+        {
+          "url": "https://ucp.dev/",
+          "title": "UCP",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/ucp-spec",
+      "alternates": {
+        "html": "https://agentcom.org/r/ucp-spec",
+        "json": "https://agentcom.org/r/ucp-spec.json",
+        "markdown": "https://agentcom.org/r/ucp-spec.md"
+      }
+    },
+    {
+      "slug": "ucp-samples",
+      "kind": "resource",
+      "title": "UCP Samples",
+      "category": "github",
+      "summary": "Official UCP reference implementations including Node/Hono/Zod merchant server examples and A2A samples.",
+      "tags": [
+        "ucp",
+        "github",
+        "samples"
+      ],
+      "url": "https://github.com/Universal-Commerce-Protocol/samples",
+      "sources": [
+        {
+          "url": "https://github.com/Universal-Commerce-Protocol/samples",
+          "title": "UCP Samples",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/ucp-samples",
+      "alternates": {
+        "html": "https://agentcom.org/r/ucp-samples",
+        "json": "https://agentcom.org/r/ucp-samples.json",
+        "markdown": "https://agentcom.org/r/ucp-samples.md"
+      }
+    },
+    {
+      "slug": "mcp-typescript-sdk",
+      "kind": "resource",
+      "title": "MCP TypeScript SDK",
+      "category": "github",
+      "summary": "Official TypeScript SDK for MCP servers and clients, including current Streamable HTTP and stdio patterns.",
+      "tags": [
+        "mcp",
+        "typescript",
+        "sdk"
+      ],
+      "url": "https://github.com/modelcontextprotocol/typescript-sdk",
+      "sources": [
+        {
+          "url": "https://github.com/modelcontextprotocol/typescript-sdk",
+          "title": "MCP TypeScript SDK",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/mcp-typescript-sdk",
+      "alternates": {
+        "html": "https://agentcom.org/r/mcp-typescript-sdk",
+        "json": "https://agentcom.org/r/mcp-typescript-sdk.json",
+        "markdown": "https://agentcom.org/r/mcp-typescript-sdk.md"
+      }
+    },
+    {
+      "slug": "llms-txt",
+      "kind": "resource",
+      "title": "llms.txt",
+      "category": "standard-proposal",
+      "summary": "Proposal and tooling for publishing concise LLM-friendly website context at /llms.txt.",
+      "tags": [
+        "llms.txt",
+        "machine-readable",
+        "docs"
+      ],
+      "url": "https://llmstxt.org/",
+      "sources": [
+        {
+          "url": "https://llmstxt.org/",
+          "title": "llms.txt",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/llms-txt",
+      "alternates": {
+        "html": "https://agentcom.org/r/llms-txt",
+        "json": "https://agentcom.org/r/llms-txt.json",
+        "markdown": "https://agentcom.org/r/llms-txt.md"
+      }
+    },
+    {
+      "slug": "acp-spec",
+      "kind": "resource",
+      "title": "Agentic Commerce Protocol",
+      "category": "protocol",
+      "summary": "OpenAI/Stripe-maintained ACP specification and ecosystem.",
+      "tags": [
+        "acp",
+        "openai",
+        "stripe"
+      ],
+      "url": "https://agenticcommerce.dev/",
+      "sources": [
+        {
+          "url": "https://agenticcommerce.dev/",
+          "title": "ACP",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/acp-spec",
+      "alternates": {
+        "html": "https://agentcom.org/r/acp-spec",
+        "json": "https://agentcom.org/r/acp-spec.json",
+        "markdown": "https://agentcom.org/r/acp-spec.md"
+      }
+    },
+    {
+      "slug": "openai-merchants",
+      "kind": "resource",
+      "title": "ChatGPT Merchants",
+      "category": "merchant-program",
+      "summary": "OpenAI merchant surface for product-feed participation and current shopping integration guidance.",
+      "tags": [
+        "openai",
+        "chatgpt",
+        "product-feed"
+      ],
+      "url": "https://chatgpt.com/merchants/",
+      "sources": [
+        {
+          "url": "https://chatgpt.com/merchants/",
+          "title": "ChatGPT Merchants",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/openai-merchants",
+      "alternates": {
+        "html": "https://agentcom.org/r/openai-merchants",
+        "json": "https://agentcom.org/r/openai-merchants.json",
+        "markdown": "https://agentcom.org/r/openai-merchants.md"
+      }
+    },
+    {
+      "slug": "google-merchant-center-ucp",
+      "kind": "resource",
+      "title": "Google Merchant Center UCP Onboarding",
+      "category": "official-docs",
+      "summary": "Merchant Center requirements and rollout guidance for UCP-powered checkout in Google surfaces.",
+      "tags": [
+        "google",
+        "merchant-center",
+        "ucp"
+      ],
+      "url": "https://support.google.com/merchants/answer/16992327?hl=en",
+      "sources": [
+        {
+          "url": "https://support.google.com/merchants/answer/16992327?hl=en",
+          "title": "Google UCP onboarding",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/google-merchant-center-ucp",
+      "alternates": {
+        "html": "https://agentcom.org/r/google-merchant-center-ucp",
+        "json": "https://agentcom.org/r/google-merchant-center-ucp.json",
+        "markdown": "https://agentcom.org/r/google-merchant-center-ucp.md"
+      }
+    },
+    {
+      "slug": "stripe-agentic-commerce",
+      "kind": "resource",
+      "title": "Stripe Agentic Commerce",
+      "category": "official-docs",
+      "summary": "Stripe overview of commerce, agent payments, agent wallets, and machine-payment infrastructure.",
+      "tags": [
+        "stripe",
+        "payments",
+        "agentic-commerce"
+      ],
+      "url": "https://stripe.com/use-cases/agentic-commerce",
+      "sources": [
+        {
+          "url": "https://stripe.com/use-cases/agentic-commerce",
+          "title": "Stripe Agentic Commerce",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/stripe-agentic-commerce",
+      "alternates": {
+        "html": "https://agentcom.org/r/stripe-agentic-commerce",
+        "json": "https://agentcom.org/r/stripe-agentic-commerce.json",
+        "markdown": "https://agentcom.org/r/stripe-agentic-commerce.md"
+      }
+    },
+    {
+      "slug": "stripe-agentic-field-guide",
+      "kind": "resource",
+      "title": "Stripe Technical Field Guide for Agentic Commerce",
+      "category": "guide",
+      "summary": "Technical readiness guidance covering machine-readable content and agent-compatible infrastructure.",
+      "tags": [
+        "stripe",
+        "agent-seo",
+        "technical"
+      ],
+      "url": "https://stripe.com/guides/how-to-prepare-for-agentic-commerce-technical-field-guide",
+      "sources": [
+        {
+          "url": "https://stripe.com/guides/how-to-prepare-for-agentic-commerce-technical-field-guide",
+          "title": "Stripe field guide",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/stripe-agentic-field-guide",
+      "alternates": {
+        "html": "https://agentcom.org/r/stripe-agentic-field-guide",
+        "json": "https://agentcom.org/r/stripe-agentic-field-guide.json",
+        "markdown": "https://agentcom.org/r/stripe-agentic-field-guide.md"
+      }
+    },
+    {
+      "slug": "ap2-docs",
+      "kind": "resource",
+      "title": "AP2 Documentation",
+      "category": "protocol",
+      "summary": "Agent Payments Protocol documentation and implementation resources.",
+      "tags": [
+        "ap2",
+        "payments"
+      ],
+      "url": "https://ap2-protocol.org/",
+      "sources": [
+        {
+          "url": "https://ap2-protocol.org/",
+          "title": "AP2 docs",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/ap2-docs",
+      "alternates": {
+        "html": "https://agentcom.org/r/ap2-docs",
+        "json": "https://agentcom.org/r/ap2-docs.json",
+        "markdown": "https://agentcom.org/r/ap2-docs.md"
+      }
+    },
+    {
+      "slug": "a2a-protocol",
+      "kind": "resource",
+      "title": "A2A Protocol",
+      "category": "protocol",
+      "summary": "Linux Foundation-hosted open protocol for agent-to-agent discovery, communication, and tasks.",
+      "tags": [
+        "a2a",
+        "agents"
+      ],
+      "url": "https://a2a-protocol.org/",
+      "sources": [
+        {
+          "url": "https://a2a-protocol.org/",
+          "title": "A2A docs",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/a2a-protocol",
+      "alternates": {
+        "html": "https://agentcom.org/r/a2a-protocol",
+        "json": "https://agentcom.org/r/a2a-protocol.json",
+        "markdown": "https://agentcom.org/r/a2a-protocol.md"
+      }
+    },
+    {
+      "slug": "x402-github",
+      "kind": "resource",
+      "title": "x402",
+      "category": "protocol",
+      "summary": "Open HTTP-native payment protocol and SDK ecosystem.",
+      "tags": [
+        "x402",
+        "payments",
+        "http-402"
+      ],
+      "url": "https://github.com/x402-foundation/x402",
+      "sources": [
+        {
+          "url": "https://github.com/x402-foundation/x402",
+          "title": "x402 GitHub",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/x402-github",
+      "alternates": {
+        "html": "https://agentcom.org/r/x402-github",
+        "json": "https://agentcom.org/r/x402-github.json",
+        "markdown": "https://agentcom.org/r/x402-github.md"
+      }
+    },
+    {
+      "slug": "mpp-docs",
+      "kind": "resource",
+      "title": "Machine Payments Protocol",
+      "category": "protocol",
+      "summary": "MPP protocol, SDKs, and live service directory for machine-payable HTTP services.",
+      "tags": [
+        "mpp",
+        "payments",
+        "agents"
+      ],
+      "url": "https://mpp.dev/",
+      "sources": [
+        {
+          "url": "https://mpp.dev/",
+          "title": "MPP docs",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/mpp-docs",
+      "alternates": {
+        "html": "https://agentcom.org/r/mpp-docs",
+        "json": "https://agentcom.org/r/mpp-docs.json",
+        "markdown": "https://agentcom.org/r/mpp-docs.md"
+      }
+    },
+    {
+      "slug": "stripe-machine-payments-samples",
+      "kind": "resource",
+      "title": "Stripe Machine Payments Samples",
+      "category": "github",
+      "summary": "Reference implementations for MPP and x402 machine payments.",
+      "tags": [
+        "stripe",
+        "mpp",
+        "x402",
+        "samples"
+      ],
+      "url": "https://github.com/stripe-samples/machine-payments",
+      "sources": [
+        {
+          "url": "https://github.com/stripe-samples/machine-payments",
+          "title": "Stripe machine payments samples",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/stripe-machine-payments-samples",
+      "alternates": {
+        "html": "https://agentcom.org/r/stripe-machine-payments-samples",
+        "json": "https://agentcom.org/r/stripe-machine-payments-samples.json",
+        "markdown": "https://agentcom.org/r/stripe-machine-payments-samples.md"
+      }
+    },
+    {
+      "slug": "tiktok-products-api",
+      "kind": "resource",
+      "title": "TikTok Shop Products API",
+      "category": "official-docs",
+      "summary": "API for creating, updating, retrieving, and synchronizing TikTok Shop product data.",
+      "tags": [
+        "tiktok",
+        "products-api",
+        "catalog"
+      ],
+      "url": "https://partner.tiktokshop.com/docv2/page/products-api-overview",
+      "sources": [
+        {
+          "url": "https://partner.tiktokshop.com/docv2/page/products-api-overview",
+          "title": "TikTok Products API",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/tiktok-products-api",
+      "alternates": {
+        "html": "https://agentcom.org/r/tiktok-products-api",
+        "json": "https://agentcom.org/r/tiktok-products-api.json",
+        "markdown": "https://agentcom.org/r/tiktok-products-api.md"
+      }
+    },
+    {
+      "slug": "meta-product-catalog-course",
+      "kind": "resource",
+      "title": "Meta Product Catalogs",
+      "category": "official-training",
+      "summary": "Meta Blueprint course covering catalog setup, product data management, troubleshooting, and best practices.",
+      "tags": [
+        "meta",
+        "catalog",
+        "commerce-manager"
+      ],
+      "url": "https://www.facebookblueprint.com/student/path/219728",
+      "sources": [
+        {
+          "url": "https://www.facebookblueprint.com/student/path/219728",
+          "title": "Meta Blueprint",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/meta-product-catalog-course",
+      "alternates": {
+        "html": "https://agentcom.org/r/meta-product-catalog-course",
+        "json": "https://agentcom.org/r/meta-product-catalog-course.json",
+        "markdown": "https://agentcom.org/r/meta-product-catalog-course.md"
+      }
+    },
+    {
+      "slug": "awesome-agentic-commerce-xpaysh",
+      "kind": "resource",
+      "title": "Awesome Agentic Commerce (xpaysh)",
+      "category": "github",
+      "summary": "Curated, verification-oriented index of active protocols and implementations across agentic commerce.",
+      "tags": [
+        "awesome-list",
+        "protocols",
+        "ecosystem"
+      ],
+      "url": "https://github.com/xpaysh/awesome-agentic-commerce",
+      "sources": [
+        {
+          "url": "https://github.com/xpaysh/awesome-agentic-commerce",
+          "title": "xpaysh awesome-agentic-commerce",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/awesome-agentic-commerce-xpaysh",
+      "alternates": {
+        "html": "https://agentcom.org/r/awesome-agentic-commerce-xpaysh",
+        "json": "https://agentcom.org/r/awesome-agentic-commerce-xpaysh.json",
+        "markdown": "https://agentcom.org/r/awesome-agentic-commerce-xpaysh.md"
+      }
+    },
+    {
+      "slug": "awesome-agentic-commerce-orca",
+      "kind": "resource",
+      "title": "Awesome Agentic Commerce (OrcaQubits)",
+      "category": "github",
+      "summary": "Broad resource list spanning UCP, ACP, AP2, MPP, A2A, payment rails, tools, and adopters.",
+      "tags": [
+        "awesome-list",
+        "ecosystem"
+      ],
+      "url": "https://github.com/OrcaQubits/awesome-agentic-commerce",
+      "sources": [
+        {
+          "url": "https://github.com/OrcaQubits/awesome-agentic-commerce",
+          "title": "OrcaQubits awesome-agentic-commerce",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/awesome-agentic-commerce-orca",
+      "alternates": {
+        "html": "https://agentcom.org/r/awesome-agentic-commerce-orca",
+        "json": "https://agentcom.org/r/awesome-agentic-commerce-orca.json",
+        "markdown": "https://agentcom.org/r/awesome-agentic-commerce-orca.md"
+      }
+    },
+    {
+      "slug": "anthropic-commerce-agents",
+      "kind": "resource",
+      "title": "Anthropic Commerce Agents",
+      "category": "github",
+      "summary": "Anthropic reference blueprints for retail/commerce agents.",
+      "tags": [
+        "anthropic",
+        "retail",
+        "agents",
+        "github"
+      ],
+      "url": "https://github.com/anthropics/commerce-agents",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/commerce-agents",
+          "title": "Anthropic commerce-agents",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/anthropic-commerce-agents",
+      "alternates": {
+        "html": "https://agentcom.org/r/anthropic-commerce-agents",
+        "json": "https://agentcom.org/r/anthropic-commerce-agents.json",
+        "markdown": "https://agentcom.org/r/anthropic-commerce-agents.md"
+      }
+    },
+    {
+      "slug": "ucp-js-sdk",
+      "kind": "resource",
+      "title": "UCP JavaScript SDK",
+      "category": "github",
+      "summary": "Official JavaScript SDK for the Universal Commerce Protocol.",
+      "tags": [
+        "ucp",
+        "javascript",
+        "sdk"
+      ],
+      "url": "https://github.com/Universal-Commerce-Protocol/js-sdk",
+      "sources": [
+        {
+          "url": "https://github.com/Universal-Commerce-Protocol/js-sdk",
+          "title": "UCP JavaScript SDK",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/ucp-js-sdk",
+      "alternates": {
+        "html": "https://agentcom.org/r/ucp-js-sdk",
+        "json": "https://agentcom.org/r/ucp-js-sdk.json",
+        "markdown": "https://agentcom.org/r/ucp-js-sdk.md"
+      }
+    },
+    {
+      "slug": "ucp-conformance",
+      "kind": "resource",
+      "title": "UCP Conformance Tests",
+      "category": "github",
+      "summary": "Official UCP conformance tests for validating implementations.",
+      "tags": [
+        "ucp",
+        "testing",
+        "conformance"
+      ],
+      "url": "https://github.com/Universal-Commerce-Protocol/conformance",
+      "sources": [
+        {
+          "url": "https://github.com/Universal-Commerce-Protocol/conformance",
+          "title": "UCP conformance",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/ucp-conformance",
+      "alternates": {
+        "html": "https://agentcom.org/r/ucp-conformance",
+        "json": "https://agentcom.org/r/ucp-conformance.json",
+        "markdown": "https://agentcom.org/r/ucp-conformance.md"
+      }
+    },
+    {
+      "slug": "openai-merchant-feed-terms",
+      "kind": "resource",
+      "title": "OpenAI Merchant Feed Terms",
+      "category": "policy",
+      "summary": "Current terms governing merchant feed submission to OpenAI commerce experiences.",
+      "tags": [
+        "openai",
+        "merchant-feed",
+        "policy"
+      ],
+      "url": "https://openai.com/policies/merchant-feed-terms-of-service/",
+      "sources": [
+        {
+          "url": "https://openai.com/policies/merchant-feed-terms-of-service/",
+          "title": "OpenAI Merchant Feed Terms",
+          "authority": "primary",
+          "last_verified": "2026-09-08"
+        }
+      ],
+      "canonical": "https://agentcom.org/r/openai-merchant-feed-terms",
+      "alternates": {
+        "html": "https://agentcom.org/r/openai-merchant-feed-terms",
+        "json": "https://agentcom.org/r/openai-merchant-feed-terms.json",
+        "markdown": "https://agentcom.org/r/openai-merchant-feed-terms.md"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "agentcom-org",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Open, machine-readable resource hub for agentic commerce.",
+  "scripts": {
+    "dev": "node --watch server.mjs",
+    "start": "node server.mjs",
+    "mcp": "node mcp-stdio.mjs",
+    "build": "node scripts/build-machine-files.mjs",
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test",
+    "check": "npm run build && npm run validate && npm test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}

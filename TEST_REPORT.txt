@@ -1,0 +1,16 @@
+AgentCom.org MVP verification
+Date: 2026-09-08
+
+npm run check
+- machine files generated: PASS (48 canonical items)
+- schema/content validation: PASS
+- automated tests: 7/7 PASS
+
+HTTP smoke test
+- GET /: 200
+- GET /api/v1/search?q=shopify+ucp: PASS; 19 matching records
+- POST /mcp tools/list: PASS; 5 tools exposed
+- /llms.txt generated: 44 lines
+- /llms-full.txt generated: 1495 lines
+
+Note: outbound DNS is disabled in the build sandbox, so live external-store auditing and literal git clone operations cannot be exercised here. GitHub repositories were inspected through the connected GitHub API, and scripts/fetch-upstreams.sh performs the requested shallow clones on any normal networked machine.

@@ -1,0 +1,19 @@
+{
+  "name": "AgentCom.org",
+  "tagline": "The open operating manual for agentic commerce.",
+  "description": "Machine-readable guides, protocols, platform playbooks, APIs, and MCP resources for selling to and through AI agents.",
+  "license": "CC-BY-4.0 content; MIT code",
+  "last_verified": "2026-09-08",
+  "canonical_base_url": "https://agentcom.org",
+  "machine_endpoints": {
+    "api": "/api/v1",
+    "search": "/api/v1/search?q=",
+    "graph": "/api/v1/graph",
+    "ndjson": "/api/v1/export.ndjson",
+    "mcp": "/mcp",
+    "llms": "/llms.txt",
+    "llms_full": "/llms-full.txt",
+    "agents": "/agents.md",
+    "openapi": "/openapi.json"
+  }
+}

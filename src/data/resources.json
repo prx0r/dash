@@ -1,0 +1,526 @@
+[
+  {
+    "slug": "shopify-agentic-commerce-docs",
+    "kind": "resource",
+    "title": "Shopify Agentic Commerce Docs",
+    "category": "official-docs",
+    "summary": "Shopify developer hub for UCP-compliant commerce agents, catalogs, carts, checkout, orders, profiles, and MCP endpoints.",
+    "tags": [
+      "shopify",
+      "ucp",
+      "mcp"
+    ],
+    "url": "https://shopify.dev/docs/agents",
+    "sources": [
+      {
+        "url": "https://shopify.dev/docs/agents",
+        "title": "Shopify agentic commerce docs",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "shopify-agents-md",
+    "kind": "resource",
+    "title": "Shopify agents.md",
+    "category": "official-docs",
+    "summary": "Shopify reference for the canonical agent-facing /agents.md storefront description.",
+    "tags": [
+      "shopify",
+      "agents.md",
+      "discovery"
+    ],
+    "url": "https://shopify.dev/docs/storefronts/themes/architecture/templates/agents-md-liquid",
+    "sources": [
+      {
+        "url": "https://shopify.dev/docs/storefronts/themes/architecture/templates/agents-md-liquid",
+        "title": "Shopify agents.md",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "shopify-storefront-catalog-mcp",
+    "kind": "resource",
+    "title": "Shopify Storefront Catalog MCP",
+    "category": "official-docs",
+    "summary": "Merchant-scoped UCP/MCP tools for product search, lookup, and product details.",
+    "tags": [
+      "shopify",
+      "catalog",
+      "mcp",
+      "ucp"
+    ],
+    "url": "https://shopify.dev/docs/agents/catalog/storefront-catalog",
+    "sources": [
+      {
+        "url": "https://shopify.dev/docs/agents/catalog/storefront-catalog",
+        "title": "Storefront Catalog MCP",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "ucp-spec",
+    "kind": "resource",
+    "title": "UCP Specification",
+    "category": "protocol",
+    "summary": "Canonical Universal Commerce Protocol documentation.",
+    "tags": [
+      "ucp",
+      "commerce"
+    ],
+    "url": "https://ucp.dev/",
+    "sources": [
+      {
+        "url": "https://ucp.dev/",
+        "title": "UCP",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "ucp-samples",
+    "kind": "resource",
+    "title": "UCP Samples",
+    "category": "github",
+    "summary": "Official UCP reference implementations including Node/Hono/Zod merchant server examples and A2A samples.",
+    "tags": [
+      "ucp",
+      "github",
+      "samples"
+    ],
+    "url": "https://github.com/Universal-Commerce-Protocol/samples",
+    "sources": [
+      {
+        "url": "https://github.com/Universal-Commerce-Protocol/samples",
+        "title": "UCP Samples",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "mcp-typescript-sdk",
+    "kind": "resource",
+    "title": "MCP TypeScript SDK",
+    "category": "github",
+    "summary": "Official TypeScript SDK for MCP servers and clients, including current Streamable HTTP and stdio patterns.",
+    "tags": [
+      "mcp",
+      "typescript",
+      "sdk"
+    ],
+    "url": "https://github.com/modelcontextprotocol/typescript-sdk",
+    "sources": [
+      {
+        "url": "https://github.com/modelcontextprotocol/typescript-sdk",
+        "title": "MCP TypeScript SDK",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "llms-txt",
+    "kind": "resource",
+    "title": "llms.txt",
+    "category": "standard-proposal",
+    "summary": "Proposal and tooling for publishing concise LLM-friendly website context at /llms.txt.",
+    "tags": [
+      "llms.txt",
+      "machine-readable",
+      "docs"
+    ],
+    "url": "https://llmstxt.org/",
+    "sources": [
+      {
+        "url": "https://llmstxt.org/",
+        "title": "llms.txt",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "acp-spec",
+    "kind": "resource",
+    "title": "Agentic Commerce Protocol",
+    "category": "protocol",
+    "summary": "OpenAI/Stripe-maintained ACP specification and ecosystem.",
+    "tags": [
+      "acp",
+      "openai",
+      "stripe"
+    ],
+    "url": "https://agenticcommerce.dev/",
+    "sources": [
+      {
+        "url": "https://agenticcommerce.dev/",
+        "title": "ACP",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "openai-merchants",
+    "kind": "resource",
+    "title": "ChatGPT Merchants",
+    "category": "merchant-program",
+    "summary": "OpenAI merchant surface for product-feed participation and current shopping integration guidance.",
+    "tags": [
+      "openai",
+      "chatgpt",
+      "product-feed"
+    ],
+    "url": "https://chatgpt.com/merchants/",
+    "sources": [
+      {
+        "url": "https://chatgpt.com/merchants/",
+        "title": "ChatGPT Merchants",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "google-merchant-center-ucp",
+    "kind": "resource",
+    "title": "Google Merchant Center UCP Onboarding",
+    "category": "official-docs",
+    "summary": "Merchant Center requirements and rollout guidance for UCP-powered checkout in Google surfaces.",
+    "tags": [
+      "google",
+      "merchant-center",
+      "ucp"
+    ],
+    "url": "https://support.google.com/merchants/answer/16992327?hl=en",
+    "sources": [
+      {
+        "url": "https://support.google.com/merchants/answer/16992327?hl=en",
+        "title": "Google UCP onboarding",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "stripe-agentic-commerce",
+    "kind": "resource",
+    "title": "Stripe Agentic Commerce",
+    "category": "official-docs",
+    "summary": "Stripe overview of commerce, agent payments, agent wallets, and machine-payment infrastructure.",
+    "tags": [
+      "stripe",
+      "payments",
+      "agentic-commerce"
+    ],
+    "url": "https://stripe.com/use-cases/agentic-commerce",
+    "sources": [
+      {
+        "url": "https://stripe.com/use-cases/agentic-commerce",
+        "title": "Stripe Agentic Commerce",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "stripe-agentic-field-guide",
+    "kind": "resource",
+    "title": "Stripe Technical Field Guide for Agentic Commerce",
+    "category": "guide",
+    "summary": "Technical readiness guidance covering machine-readable content and agent-compatible infrastructure.",
+    "tags": [
+      "stripe",
+      "agent-seo",
+      "technical"
+    ],
+    "url": "https://stripe.com/guides/how-to-prepare-for-agentic-commerce-technical-field-guide",
+    "sources": [
+      {
+        "url": "https://stripe.com/guides/how-to-prepare-for-agentic-commerce-technical-field-guide",
+        "title": "Stripe field guide",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "ap2-docs",
+    "kind": "resource",
+    "title": "AP2 Documentation",
+    "category": "protocol",
+    "summary": "Agent Payments Protocol documentation and implementation resources.",
+    "tags": [
+      "ap2",
+      "payments"
+    ],
+    "url": "https://ap2-protocol.org/",
+    "sources": [
+      {
+        "url": "https://ap2-protocol.org/",
+        "title": "AP2 docs",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "a2a-protocol",
+    "kind": "resource",
+    "title": "A2A Protocol",
+    "category": "protocol",
+    "summary": "Linux Foundation-hosted open protocol for agent-to-agent discovery, communication, and tasks.",
+    "tags": [
+      "a2a",
+      "agents"
+    ],
+    "url": "https://a2a-protocol.org/",
+    "sources": [
+      {
+        "url": "https://a2a-protocol.org/",
+        "title": "A2A docs",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "x402-github",
+    "kind": "resource",
+    "title": "x402",
+    "category": "protocol",
+    "summary": "Open HTTP-native payment protocol and SDK ecosystem.",
+    "tags": [
+      "x402",
+      "payments",
+      "http-402"
+    ],
+    "url": "https://github.com/x402-foundation/x402",
+    "sources": [
+      {
+        "url": "https://github.com/x402-foundation/x402",
+        "title": "x402 GitHub",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "mpp-docs",
+    "kind": "resource",
+    "title": "Machine Payments Protocol",
+    "category": "protocol",
+    "summary": "MPP protocol, SDKs, and live service directory for machine-payable HTTP services.",
+    "tags": [
+      "mpp",
+      "payments",
+      "agents"
+    ],
+    "url": "https://mpp.dev/",
+    "sources": [
+      {
+        "url": "https://mpp.dev/",
+        "title": "MPP docs",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "stripe-machine-payments-samples",
+    "kind": "resource",
+    "title": "Stripe Machine Payments Samples",
+    "category": "github",
+    "summary": "Reference implementations for MPP and x402 machine payments.",
+    "tags": [
+      "stripe",
+      "mpp",
+      "x402",
+      "samples"
+    ],
+    "url": "https://github.com/stripe-samples/machine-payments",
+    "sources": [
+      {
+        "url": "https://github.com/stripe-samples/machine-payments",
+        "title": "Stripe machine payments samples",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "tiktok-products-api",
+    "kind": "resource",
+    "title": "TikTok Shop Products API",
+    "category": "official-docs",
+    "summary": "API for creating, updating, retrieving, and synchronizing TikTok Shop product data.",
+    "tags": [
+      "tiktok",
+      "products-api",
+      "catalog"
+    ],
+    "url": "https://partner.tiktokshop.com/docv2/page/products-api-overview",
+    "sources": [
+      {
+        "url": "https://partner.tiktokshop.com/docv2/page/products-api-overview",
+        "title": "TikTok Products API",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "meta-product-catalog-course",
+    "kind": "resource",
+    "title": "Meta Product Catalogs",
+    "category": "official-training",
+    "summary": "Meta Blueprint course covering catalog setup, product data management, troubleshooting, and best practices.",
+    "tags": [
+      "meta",
+      "catalog",
+      "commerce-manager"
+    ],
+    "url": "https://www.facebookblueprint.com/student/path/219728",
+    "sources": [
+      {
+        "url": "https://www.facebookblueprint.com/student/path/219728",
+        "title": "Meta Blueprint",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "awesome-agentic-commerce-xpaysh",
+    "kind": "resource",
+    "title": "Awesome Agentic Commerce (xpaysh)",
+    "category": "github",
+    "summary": "Curated, verification-oriented index of active protocols and implementations across agentic commerce.",
+    "tags": [
+      "awesome-list",
+      "protocols",
+      "ecosystem"
+    ],
+    "url": "https://github.com/xpaysh/awesome-agentic-commerce",
+    "sources": [
+      {
+        "url": "https://github.com/xpaysh/awesome-agentic-commerce",
+        "title": "xpaysh awesome-agentic-commerce",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "awesome-agentic-commerce-orca",
+    "kind": "resource",
+    "title": "Awesome Agentic Commerce (OrcaQubits)",
+    "category": "github",
+    "summary": "Broad resource list spanning UCP, ACP, AP2, MPP, A2A, payment rails, tools, and adopters.",
+    "tags": [
+      "awesome-list",
+      "ecosystem"
+    ],
+    "url": "https://github.com/OrcaQubits/awesome-agentic-commerce",
+    "sources": [
+      {
+        "url": "https://github.com/OrcaQubits/awesome-agentic-commerce",
+        "title": "OrcaQubits awesome-agentic-commerce",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "anthropic-commerce-agents",
+    "kind": "resource",
+    "title": "Anthropic Commerce Agents",
+    "category": "github",
+    "summary": "Anthropic reference blueprints for retail/commerce agents.",
+    "tags": [
+      "anthropic",
+      "retail",
+      "agents",
+      "github"
+    ],
+    "url": "https://github.com/anthropics/commerce-agents",
+    "sources": [
+      {
+        "url": "https://github.com/anthropics/commerce-agents",
+        "title": "Anthropic commerce-agents",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "ucp-js-sdk",
+    "kind": "resource",
+    "title": "UCP JavaScript SDK",
+    "category": "github",
+    "summary": "Official JavaScript SDK for the Universal Commerce Protocol.",
+    "tags": [
+      "ucp",
+      "javascript",
+      "sdk"
+    ],
+    "url": "https://github.com/Universal-Commerce-Protocol/js-sdk",
+    "sources": [
+      {
+        "url": "https://github.com/Universal-Commerce-Protocol/js-sdk",
+        "title": "UCP JavaScript SDK",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "ucp-conformance",
+    "kind": "resource",
+    "title": "UCP Conformance Tests",
+    "category": "github",
+    "summary": "Official UCP conformance tests for validating implementations.",
+    "tags": [
+      "ucp",
+      "testing",
+      "conformance"
+    ],
+    "url": "https://github.com/Universal-Commerce-Protocol/conformance",
+    "sources": [
+      {
+        "url": "https://github.com/Universal-Commerce-Protocol/conformance",
+        "title": "UCP conformance",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "slug": "openai-merchant-feed-terms",
+    "kind": "resource",
+    "title": "OpenAI Merchant Feed Terms",
+    "category": "policy",
+    "summary": "Current terms governing merchant feed submission to OpenAI commerce experiences.",
+    "tags": [
+      "openai",
+      "merchant-feed",
+      "policy"
+    ],
+    "url": "https://openai.com/policies/merchant-feed-terms-of-service/",
+    "sources": [
+      {
+        "url": "https://openai.com/policies/merchant-feed-terms-of-service/",
+        "title": "OpenAI Merchant Feed Terms",
+        "authority": "primary",
+        "last_verified": "2026-09-08"
+      }
+    ]
+  }
+]

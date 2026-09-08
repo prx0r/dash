@@ -1,0 +1,44 @@
+# AgentCom.org
+
+> Machine-readable guides, protocols, platform playbooks, APIs, and MCP resources for selling to and through AI agents.
+
+Canonical machine interfaces:
+
+- [Full context](https://agentcom.org/llms-full.txt)
+- [JSON catalog](https://agentcom.org/api/v1/catalog)
+- [Search API](https://agentcom.org/api/v1/search?q=shopify)
+- [Knowledge graph](https://agentcom.org/api/v1/graph)
+- [MCP endpoint](https://agentcom.org/mcp)
+- [OpenAPI](https://agentcom.org/openapi.json)
+
+## Guides
+
+- [Make a Shopify store agent-ready](https://agentcom.org/r/shopify-agent-readiness.md): A practical checklist for Shopify merchants: agents.md, UCP discovery, catalog quality, policies, and transaction surfaces.
+- [Prepare for Google UCP / Gemini commerce](https://agentcom.org/r/google-ucp-onboarding.md): A merchant-oriented checklist for getting product data and checkout infrastructure ready for Google UCP onboarding.
+- [Prepare products for discovery in ChatGPT](https://agentcom.org/r/chatgpt-product-discovery.md): How to make merchant/product data complete, current, and suitable for ChatGPT shopping and ACP-based product discovery.
+- [Agent SEO / ACO fundamentals](https://agentcom.org/r/agent-seo-basics.md): A platform-neutral playbook for making a merchant legible, trustworthy, and actionable to AI agents.
+- [Expose commerce knowledge through MCP](https://agentcom.org/r/mcp-for-commerce-resources.md): Design an MCP server that gives agents authoritative commerce resources and narrowly-scoped tools.
+- [Add machine payments with Stripe / MPP](https://agentcom.org/r/stripe-machine-payments.md): When and how to make an API, dataset, compute service, or agent-accessible endpoint payable by machines.
+- [Build a clean TikTok Shop product data pipeline](https://agentcom.org/r/tiktok-catalog-setup.md): Treat TikTok Shop as another structured commerce surface with synchronized product state and webhook-driven updates.
+- [Create a canonical Meta Commerce catalog](https://agentcom.org/r/meta-catalog-foundation.md): A baseline for keeping Facebook and Instagram commerce product data structured, stable, and synchronized.
+- [Publish commerce content for agents, not just browsers](https://agentcom.org/r/machine-readable-commerce-content.md): A content architecture for publishing the same authoritative fact as HTML, Markdown, JSON, feeds, and protocol resources.
+- [Choose the right agentic-commerce protocol](https://agentcom.org/r/protocol-selection-map.md): A practical map: use MCP for tools/resources, A2A for agent collaboration, UCP/ACP for commerce flows, and AP2/x402/MPP for payments depending on the use case.
+
+## Protocols
+
+- [Universal Commerce Protocol (UCP)](https://agentcom.org/r/ucp.md): Open commerce protocol for interoperable journeys between consumer surfaces, businesses, agents, and payment providers. Supports API, MCP, and A2A bindings.
+- [Model Context Protocol (MCP)](https://agentcom.org/r/mcp.md): Standard protocol for exposing tools, resources, and prompts to AI applications. AgentCom uses MCP as its primary agent-facing query interface.
+- [Agentic Commerce Protocol (ACP)](https://agentcom.org/r/acp.md): Open standard connecting buyers, AI agents, and businesses for product discovery and commerce interactions.
+- [Agent Payments Protocol (AP2)](https://agentcom.org/r/ap2.md): Open protocol for secure, interoperable payments involving AI agents, designed to work alongside commerce and agent interoperability protocols.
+- [Agent2Agent Protocol (A2A)](https://agentcom.org/r/a2a.md): Open protocol for communication and interoperability between independent agentic applications.
+- [x402](https://agentcom.org/r/x402.md): HTTP-native payments protocol centered on 402 Payment Required, with SDKs for machine and agent payments.
+- [Machine Payments Protocol (MPP)](https://agentcom.org/r/mpp.md): Open standard for machine-to-machine payments using an HTTP payment flow, designed for agentic payments and usage-based services.
+
+## Platforms
+
+- [Shopify](https://agentcom.org/r/shopify.md): The most mature mainstream merchant platform for UCP/MCP exposure in the current agentic-commerce stack.
+- [Google / Merchant Center](https://agentcom.org/r/google.md): Google is onboarding merchants to UCP-powered checkout surfaces in AI Mode and Gemini, with Merchant Center as an onboarding surface.
+- [OpenAI / ChatGPT Commerce](https://agentcom.org/r/openai.md): ChatGPT shopping uses merchant/product metadata and ACP-based discovery integrations, including direct merchant feeds and platform integrations.
+- [Stripe](https://agentcom.org/r/stripe.md): Stripe provides agentic-commerce infrastructure for product distribution, checkout/payments, agent wallets, and machine payments.
+- [TikTok Shop](https://agentcom.org/r/tiktok.md): TikTok Shop exposes APIs for sellers and partners to create, update, retrieve, and synchronize structured product catalog data.
+- [Meta Commerce](https://agentcom.org/r/meta.md): Meta Commerce Manager catalogs are structured product sources for Facebook and Instagram commerce and advertising surfaces.
