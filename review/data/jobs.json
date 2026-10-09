@@ -1,0 +1,12 @@
+[
+ {
+  "id": "j1791521156594",
+  "kind": "brick_qc",
+  "args": {
+   "glb": "/home/ubuntu/1st sale/brick-figure-01a11ea4-bb67-73c3-9c58-dd452e402f1a.glb"
+  },
+  "status": "done",
+  "at": "2026-10-09T04:45:56.594Z",
+  "result": "04:45:57 | INFO: Data are loaded, start creating Blender stuff\n04:45:57 | INFO: Blender create Mesh node 0\n04:45:57 | INFO: Blender create Mesh node 1\n04:45:57 | INFO: Blender create Mesh node 2\n04:45:57 | INFO: Blender create Mesh node 3\n04:45:57 | INFO: glTF import finished in 0.28s\nQC-REPORT:{\"file\": \"/home/ubuntu/1st sale/brick-figure-01a11ea4-bb67-73c3-9c58-dd452e402f1a.glb\", \"target_mm\": 75.0, \"parts\": [{\"object\": \"Head\", \"verts\": 35611, \"tris\": 65052, \"nonmanifold_edges\": 6016, \"loose_verts\": 0, \"bounds_mm\": [16327.8, 11713.2, 14659.8], \"materials\": [{\"name\": \"head\", \"base\": [0.8, 0.8, 0.8, 1.0]}]}, {\"object\": \"Right Arm\", \"verts\": 12010, \"tris\": 22356, \"nonmanifold_edges\": 1624, \"loose_verts\": 0, \"bounds_mm\": [8111.0, 9104.8, 17616.9], \"materials\": [{\"name\": \"rightArm\", \"base\": [0.8, 0.8, 0.8, 1.0]}]}, {\"object\": \"Left Arm\", \"verts\": 11958, \"tris\": 22016, \"nonmanifold_edges\": 1858, \"loose_verts\": 0, \"bounds_mm\": [8111.9, 9095.3, 17607.6], \"materials\": [{\"name\": \"leftArm\", \"base\": [0.8, 0.8, 0.8, 1.0]}]}, {\"object\": \"Legs\", \"verts\": 58239, \"tris\": 104920, \"nonmanifold_edges\": 11162, \"loose_verts\": 0, \"bounds_mm\": [15797.7, 9842.7, 39814.1], \"materials\": [{\"name\": \"legs\", \"base\": [0.8, 0.8, 0.8, 1.0]}]}]}\nBlender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:30:59)\n\nBlender quit\n/home/ubuntu/freaktown/scripts/brick_qc.py:44: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0\n  if m and m.use_nodes:\n"
+ }
+]

@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>review dash — direct the puppets</title>
+<style>body{background:#0d0714;color:#f5eeda;font-family:Georgia,serif;margin:0;padding:24px}
+h1{margin:0}h2{color:#c9a86a;border-bottom:1px solid #3a2a55;padding-bottom:6px}
+.sub{color:#c9a86a;margin:4px 0 18px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+figure{margin:0;background:#1a1026;border:1px solid #3a2a55;border-radius:10px;overflow:hidden}
+img{width:100%;display:block}figcaption{padding:8px 10px;font-size:.82em}
+.row{display:flex;gap:6px;padding:0 10px 10px}button{background:#c9a86a;border:0;border-radius:6px;padding:6px 10px;font-weight:bold;cursor:pointer}
+button.ghost{background:#3a2a55;color:#f5eeda}input{flex:1;background:#0d0714;border:1px solid #3a2a55;color:#f5eeda;border-radius:6px;padding:6px}
+.verdict{padding:0 10px 8px;font-size:.8em;color:#9db89d}.job{font-family:monospace;font-size:.8em;background:#1a1026;padding:8px;border-radius:8px;margin:4px 0}</style></head><body>
+<h1>Review dash</h1><div class="sub">Watch renders land, approve or redirect, steer the next job. <a href="/three.html" style="color:#c9a86a">Open the 3D room →</a></div>
+<div id="meshy" class="sub"></div>
+<div id="jobs"></div>
+<div id="gal"></div>
+<script>
+async function j(u,o){const r=await fetch(u,o);return r.json();}
+async function load(){
+  const a=await j('/api/assets');
+  document.getElementById('meshy').textContent='Meshy: '+(await j('/api/meshy')).note;
+  const jobs=await j('/api/jobs');
+  document.getElementById('jobs').innerHTML='<h2>Jobs</h2>'+jobs.slice(-8).map(x=>`<div class=job>${x.id} ${x.kind} <b>${x.status}</b></div>`).join('');
+  let h='';
+  for(const [g,files] of Object.entries(a.groups)){
+    h+=`<h2>${g} (${files.length})</h2><div class="grid">`;
+    for(const f of files){
+      const rv=(a.reviews[f]||{}).verdict||'';
+      h+=`<figure><img loading="lazy" src="${f}"><figcaption>${f.split('/').pop()}</figcaption>
+      <div class="verdict">${rv?'verdict: '+rv:''}</div>
+      <div class="row"><button onclick="vote('${f}','approve')">approve</button>
+      <button class="ghost" onclick="vote('${f}','redo')">redo</button>
+      <input id="n-${btoa(f)}" placeholder="note for the agent"></div></figure>`;
+    }
+    h+='</div>';
+  }
+  document.getElementById('gal').innerHTML=h;
+}
+async function vote(asset,verdict){
+  const note=(document.getElementById('n-'+btoa(asset))||{}).value||'';
+  await j('/api/review',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({asset,verdict,note})});
+  load();
+}
+load();setInterval(load,15000);
+</script></body></html>

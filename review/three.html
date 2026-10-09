@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>3D room — spin the meshes</title>
+<style>body{background:#0d0714;color:#f5eeda;font-family:Georgia,serif;margin:0;padding:20px}
+h1{margin:0 0 4px}.sub{color:#c9a86a;margin-bottom:12px}
+#bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+button{background:#c9a86a;border:0;border-radius:6px;padding:8px 12px;font-weight:bold;cursor:pointer}
+button.ghost{background:#3a2a55;color:#f5eeda}
+#view{width:100%;height:62vh;background:#161020;border:1px solid #3a2a55;border-radius:10px}
+#meta{font-size:.85em;color:#cbbfa5;margin-top:8px;white-space:pre-wrap}
+a{color:#c9a86a}</style>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
+</head><body>
+<h1>3D room</h1><div class="sub">Drag to orbit · scroll to zoom · <a href="/">gallery</a></div>
+<div id="bar"></div>
+<div id="view"></div>
+<div id="meta"></div>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+const view=document.getElementById('view'), meta=document.getElementById('meta'), bar=document.getElementById('bar');
+const renderer=new THREE.WebGLRenderer({antialias:true});
+renderer.setSize(view.clientWidth,view.clientHeight);
+renderer.outputColorSpace=THREE.SRGBColorSpace;
+view.appendChild(renderer.domElement);
+const scene=new THREE.Scene();
+scene.background=new THREE.Color(0x161020);
+scene.add(new THREE.HemisphereLight(0xfff2dd,0x332244,1.4));
+const key=new THREE.DirectionalLight(0xffe0b3,2.2); key.position.set(3,4,5); scene.add(key);
+const rim=new THREE.DirectionalLight(0x88aaff,0.8); rim.position.set(-4,2,-3); scene.add(rim);
+const camera=new THREE.PerspectiveCamera(45,view.clientWidth/view.clientHeight,0.01,100);
+const controls=new OrbitControls(camera,renderer.domElement);
+controls.enableDamping=true;
+let cur=null;
+async function load(name){
+  if(cur){scene.remove(cur);cur=null;}
+  meta.textContent='loading '+name+' …';
+  const gltf=await new GLTFLoader().loadAsync('/models/'+name);
+  cur=gltf.scene;
+  const box=new THREE.Box3().setFromObject(cur);
+  const size=box.getSize(new THREE.Vector3()), ctr=box.getCenter(new THREE.Vector3());
+  const s=1.2/Math.max(size.x,size.y,size.z);
+  cur.scale.setScalar(s);
+  cur.position.sub(ctr.clone().multiplyScalar(s));
+  cur.position.y-=box.min.y*s;
+  scene.add(cur);
+  const d=1.6;
+  camera.position.set(d*0.7,-d,d*0.55);
+  controls.target.set(0,0.5,0);
+  controls.update();
+  meta.textContent=name+' · drag to spin · verdict buttons live in the gallery';
+  document.querySelectorAll('#bar button').forEach(b=>b.classList.toggle('ghost',b.dataset.m!==name));
+}
+const models=await (await fetch('/api/models')).json();
+for(const m of models){
+  const b=document.createElement('button');
+  b.textContent=m; b.dataset.m=m; b.className='ghost';
+  b.onclick=()=>load(m); bar.appendChild(b);
+}
+(function tick(){requestAnimationFrame(tick);controls.update();renderer.render(scene,camera);})();
+if(models.length)load(models[0]);
+addEventListener('resize',()=>{camera.aspect=view.clientWidth/view.clientHeight;camera.updateProjectionMatrix();renderer.setSize(view.clientWidth,view.clientHeight);});
+</script></body></html>
