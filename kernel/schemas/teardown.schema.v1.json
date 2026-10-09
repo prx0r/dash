@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agentcom.kernel.teardown.v1",
+  "title": "Business Teardown — six-question interrogation per template",
+  "description": "For each template: how work arrives, where margin leaks (with stats), what must never break, dark vs dead data, what breaks at 2x volume, pains ranked and mapped to shared fixes.",
+  "type": "object",
+  "required": ["teardown_id", "template_id", "vertical", "acquisition", "margin_leaks", "compliance_spine", "pain_ranking"],
+  "properties": {
+    "teardown_id": { "type": "string", "pattern": "^td-[a-z0-9-]+$" },
+    "template_id": { "type": "string" },
+    "vertical": { "type": "string" },
+    "acquisition": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["channel", "owner", "risk"],
+        "properties": {
+          "channel": { "type": "string" },
+          "owner": { "type": "string", "enum": ["marketplace", "direct", "repeat", "referral", "inbound-queue", "event"] },
+          "risk": { "type": "string" }
+        }
+      }
+    },
+    "margin_leaks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "mechanism", "stat_basis"],
+        "properties": {
+          "name": { "type": "string" },
+          "mechanism": { "type": "string" },
+          "stat": { "type": "string" },
+          "stat_basis": { "type": "string", "enum": ["verified-2026", "govt-data", "template-analysis"] },
+          "annual_impact_note": { "type": "string" }
+        }
+      }
+    },
+    "compliance_spine": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["requirement", "failure_mode"],
+        "properties": {
+          "requirement": { "type": "string" },
+          "source": { "type": "string" },
+          "failure_mode": { "type": "string" }
+        }
+      }
+    },
+    "dark_data": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Known but untracked — exists in heads, books, inboxes"
+    },
+    "dead_data": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Tracked but unused — collected, never acted on"
+    },
+    "scaling_wall": {
+      "type": "object",
+      "required": ["breaks_at", "bottleneck"],
+      "properties": {
+        "breaks_at": { "type": "string" },
+        "bottleneck": { "type": "string" }
+      }
+    },
+    "pain_ranking": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["rank", "pain", "fix_id", "why"],
+        "properties": {
+          "rank": { "type": "integer", "minimum": 1 },
+          "pain": { "type": "string" },
+          "fix_id": { "type": "string" },
+          "why": { "type": "string" }
+        }
+      }
+    }
+  }
+}

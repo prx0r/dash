@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agentcom.kernel.approval.v1",
+  "title": "Approval — parameter-bound human authorization",
+  "description": "An Approval cryptographically binds to specific action parameters. Prevents approval bypass where a compromised context reuses an approval for a different action.",
+  "type": "object",
+  "required": ["approval_id", "task_id", "action", "resource", "provider", "expires_at"],
+  "properties": {
+    "approval_id": {
+      "type": "string",
+      "pattern": "^APR-[A-Z0-9]{8}$",
+      "description": "Unique approval identifier"
+    },
+    "task_id": {
+      "type": "string",
+      "description": "ATask this approval is bound to"
+    },
+    "action": {
+      "type": "string",
+      "description": "Exact action being approved (e.g. domain.purchase)"
+    },
+    "resource": {
+      "type": "string",
+      "description": "Exact resource being acted upon (e.g. agentbeauty.io)"
+    },
+    "provider": {
+      "type": "string",
+      "description": "Provider where action executes (e.g. cloudflare)"
+    },
+    "max_amount": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Maximum monetary amount approved"
+    },
+    "currency": {
+      "type": "string",
+      "default": "GBP",
+      "description": "Currency for max_amount"
+    },
+    "parameters": {
+      "type": "object",
+      "description": "Exact parameters bound to this approval (action-specific)"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Approval expires after this time"
+    },
+    "single_use": {
+      "type": "boolean",
+      "default": true,
+      "description": "If true, approval is consumed on first use"
+    },
+    "approved_by": {
+      "type": "string",
+      "description": "Who approved (user_id)"
+    },
+    "approved_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "approved", "consumed", "expired", "revoked"],
+      "default": "pending"
+    }
+  }
+}

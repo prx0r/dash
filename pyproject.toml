@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "agentcom-kernel"
+version = "0.1.0"
+description = "Agentcom secure kernel — capability gate, credential broker, policy engine"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["kernel*"]

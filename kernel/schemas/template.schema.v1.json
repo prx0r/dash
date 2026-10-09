@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agentcom.kernel.template.v1",
+  "title": "Vertical Template — graph shape + workflows + stack mapping",
+  "description": "A template defines the graph shape for one business vertical. getsocials gives every company the same identity root; the template gives it vertical-specific nodes, edges, workflows and onboarding steps. Security kernel is shared and never varies.",
+  "type": "object",
+  "required": ["template_id", "vertical", "graph_shape", "workflows", "canonical_stack", "agentic_mapping"],
+  "properties": {
+    "template_id": {
+      "type": "string",
+      "pattern": "^tpl-[a-z0-9-]+$",
+      "description": "Stable template id, e.g. tpl-barber-gb"
+    },
+    "vertical": { "type": "string" },
+    "countries": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Country variants this template covers"
+    },
+    "entry_question": {
+      "type": "string",
+      "description": "The 'what is the business?' question this template answers"
+    },
+    "import_sources": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Existing tools a real business can import from (fresh-build vs import)"
+    },
+    "graph_shape": {
+      "type": "object",
+      "required": ["nodes", "edges"],
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["entity_type", "fields"],
+            "properties": {
+              "entity_type": { "type": "string" },
+              "fields": { "type": "array", "items": { "type": "string" } },
+              "description": { "type": "string" }
+            }
+          }
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["from", "to", "relation"],
+            "properties": {
+              "from": { "type": "string" },
+              "to": { "type": "string" },
+              "relation": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "workflows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "trigger", "steps"],
+        "properties": {
+          "name": { "type": "string" },
+          "trigger": { "type": "string" },
+          "steps": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "canonical_stack": {
+      "type": "array",
+      "description": "What everyone in this vertical already uses",
+      "items": {
+        "type": "object",
+        "required": ["tool", "category", "does"],
+        "properties": {
+          "tool": { "type": "string" },
+          "category": { "type": "string" },
+          "does": { "type": "string" },
+          "verdict": {
+            "type": "string",
+            "enum": ["replace", "integrate", "import-from"],
+            "description": "replace = agentic version supersedes it; integrate = keep + connect API; import-from = one-time data migration"
+          }
+        }
+      }
+    },
+    "agentic_mapping": {
+      "type": "array",
+      "description": "Each canonical function mapped to its agentic equivalent; functionality retained, never dropped silently",
+      "items": {
+        "type": "object",
+        "required": ["canonical_function", "agentic_equivalent", "retained"],
+        "properties": {
+          "canonical_function": { "type": "string" },
+          "agentic_equivalent": { "type": "string" },
+          "retained": { "type": "boolean" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "extra_dag_steps": {
+      "type": "array",
+      "description": "Onboarding steps appended after getsocials completes",
+      "items": {
+        "type": "object",
+        "required": ["step_id", "name", "step_type", "action", "resource"],
+        "properties": {
+          "step_id": { "type": "string" },
+          "name": { "type": "string" },
+          "step_type": { "type": "string", "enum": ["m_task", "h_task"] },
+          "action": { "type": "string" },
+          "resource": { "type": "string" },
+          "depends_on": { "type": "array", "items": { "type": "string" } },
+          "estimated_minutes": { "type": "number" },
+          "human_instructions": { "type": "string" }
+        }
+      }
+    }
+  }
+}

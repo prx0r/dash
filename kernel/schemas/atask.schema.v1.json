@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agentcom.kernel.atask.v1",
+  "title": "ATask — bounded unit of economic work",
+  "description": "An ATask is the atomic unit of work in Agentcom. It contains goal, authority, budget, scope, and validator. Every action belongs to an ATask. No orphaned actions.",
+  "type": "object",
+  "required": ["task_id", "goal", "principal", "company", "capabilities_required", "approval_policy"],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "pattern": "^A-[A-Z0-9]{8}$",
+      "description": "Unique task identifier"
+    },
+    "goal": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500,
+      "description": "Human-readable goal of this task"
+    },
+    "principal": {
+      "type": "string",
+      "description": "Who owns this task (user_id or 'owner')"
+    },
+    "agent": {
+      "type": "string",
+      "description": "Which agent is executing this task"
+    },
+    "company": {
+      "type": "string",
+      "description": "Company identifier this task operates on"
+    },
+    "capabilities_required": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "List of capabilities needed (e.g. dns.write, domain.purchase)"
+    },
+    "money_budget": {
+      "type": "object",
+      "properties": {
+        "amount": { "type": "number", "minimum": 0 },
+        "currency": { "type": "string", "default": "GBP" }
+      },
+      "description": "Maximum spend for this task"
+    },
+    "time_budget": {
+      "type": "string",
+      "description": "ISO 8601 duration (e.g. PT30M for 30 minutes)"
+    },
+    "data_scope": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Resources this task can read/modify (e.g. cloudflare/account/123)"
+    },
+    "approval_policy": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "enum": ["autonomous", "human_approval", "forbidden"]
+      },
+      "description": "Per-action approval requirements"
+    },
+    "expected_outcome": {
+      "type": "string",
+      "description": "What success looks like"
+    },
+    "validator": {
+      "type": "string",
+      "description": "Validation protocol (e.g. EVP-1 layers 1-7)"
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "campaign_version_id": { "type": "string" },
+        "evidence_snapshot_id": { "type": "string" },
+        "rubric_version_id": { "type": "string" }
+      },
+      "description": "Intelligence provenance (drop references)"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "active", "blocked", "completed", "failed", "cancelled"],
+      "default": "pending"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

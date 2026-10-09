@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agentcom.kernel.distill-op.v1",
+  "$title": "Distill operation definition",
+  "description": "One executable step of the distillprotocol: BigQuery sprawl → campaigns/theses. Executors are pure functions; I/O lives at the boundary (kernel/bigquery). side_effect reuses the kernel classification.",
+  "type": "object",
+  "required": ["op_id", "version", "description", "inputs", "outputs", "side_effect", "deterministic", "sources"],
+  "properties": {
+    "op_id": { "type": "string", "pattern": "^distill-[a-z-]+" },
+    "version": { "type": "string", "pattern": "^v[0-9]+$" },
+    "description": { "type": "string" },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "from"],
+        "properties": {
+          "name": { "type": "string" },
+          "from": { "type": "string" },
+          "required": { "type": "boolean", "default": true }
+        }
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "to"],
+        "properties": {
+          "name": { "type": "string" },
+          "to": { "type": "string" }
+        }
+      }
+    },
+    "params": { "type": "object" },
+    "side_effect": { "type": "integer", "minimum": 0, "maximum": 5 },
+    "deterministic": { "type": "boolean" },
+    "sources": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Drop docs this op formalizes (repo-relative paths)"
+    }
+  }
+}

@@ -1,5 +1,9 @@
-node_modules/
-.DS_Store
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+*.pyc
 .env
-upstreams/
-coverage/
+.venv/
+node_modules/
+dist/
+*.egg-info/

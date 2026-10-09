@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agentcom.kernel.report.v1",
+  "$title": "State-of-reports structure (distilled from /drop report corpus)",
+  "description": "Common spine across STATE_OF_BIGQUERY, HCC_V2, campaign verifications, REDTEAM: metadata → inventory → census → proof → gaps → tiers → honesty → next. Reports are data with verdicts, never prose without receipts.",
+  "type": "object",
+  "required": ["report_id", "title", "date", "status", "sections"],
+  "properties": {
+    "report_id": { "type": "string" },
+    "title": { "type": "string" },
+    "date": { "type": "string" },
+    "status": { "type": "string" },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["kind", "heading"],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": ["executive-summary", "inventory", "census", "proof",
+                     "gaps", "tiers", "verdicts", "honesty", "next-steps",
+                     "sources", "formula"]
+          },
+          "heading": { "type": "string" },
+          "body": { "type": "string" },
+          "tables": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["columns", "rows"],
+              "properties": {
+                "columns": { "type": "array", "items": { "type": "string" } },
+                "rows": { "type": "array" }
+              }
+            }
+          },
+          "queries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["sql", "result"],
+              "properties": {
+                "sql": { "type": "string" },
+                "result": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
